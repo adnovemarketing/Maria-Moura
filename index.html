@@ -84,75 +84,111 @@
     </style>
 </head>
 <body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+
 <!-- TopAppBar -->
-<header class="bg-[#faf9f6]/80 dark:bg-stone-900/80 backdrop-blur-md docked full-width top-0 sticky z-50 no-border shadow-none bg-surface-container-low">
-<div class="flex justify-between items-center px-8 py-4 w-full max-w-screen-2xl mx-auto">
-<div class="flex items-center gap-8">
-<h1 class="font-serif text-2xl font-bold tracking-tighter text-[#865140] dark:text-[#c28471]">MARIA MOURA</h1>
-<nav class="hidden md:flex items-center space-x-8 font-serif text-lg tracking-wide">
-<a class="text-[#865140] border-b-2 border-[#865140] pb-1" href="#">Novidades</a>
-<a class="text-[#5f5e5e] hover:text-[#865140] transition-colors" href="#">Coleções</a>
-<a class="text-[#5f5e5e] hover:text-[#865140] transition-colors" href="#">Blusas</a>
-<a class="text-[#5f5e5e] hover:text-[#865140] transition-colors" href="#">Calças</a>
-<a class="text-[#5f5e5e] hover:text-[#865140] transition-colors" href="#">Sale</a>
-</nav>
-</div>
-<div class="flex items-center space-x-6 text-[#865140] dark:text-[#c28471]">
-<button class="hover:opacity-80 transition-opacity duration-300 scale-95 active:duration-150">
-<span class="material-symbols-outlined" data-icon="person">person</span>
-</button>
-<button class="hover:opacity-80 transition-opacity duration-300 scale-95 active:duration-150">
-<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
-</button>
-</div>
-</div>
+<header class="bg-[#faf9f6]/90 dark:bg-stone-900/90 backdrop-blur-md full-width top-0 sticky z-50 transition-all duration-300">
+  <div class="flex justify-between items-center px-6 md:px-8 py-4 w-full max-w-screen-2xl mx-auto">
+    <div class="flex items-center gap-4 md:gap-8">
+      <button class="md:hidden text-[#865140]" onclick="document.getElementById('mobile-menu').classList.remove('hidden')">
+        <span class="material-symbols-outlined text-3xl">menu</span>
+      </button>
+      <a href="index.html" class="font-serif text-xl md:text-2xl font-bold tracking-tighter text-[#865140] dark:text-[#c28471]">MARIA MOURA</a>
+      <nav class="hidden md:flex items-center space-x-8 font-serif text-lg tracking-wide">
+        <a class="nav-link text-[#5f5e5e] hover:text-[#865140] transition-colors" href="index.html">Novidades</a>
+        <a class="nav-link text-[#5f5e5e] hover:text-[#865140] transition-colors" href="listagem_de_produtos.html">Coleções</a>
+        <a class="nav-link text-[#5f5e5e] hover:text-[#865140] transition-colors" href="listagem_de_produtos.html">Blusas</a>
+        <a class="nav-link text-[#5f5e5e] hover:text-[#865140] transition-colors" href="listagem_de_produtos.html">Calças</a>
+        <a class="nav-link text-[#5f5e5e] hover:text-[#865140] transition-colors" href="listagem_de_produtos.html">Sale</a>
+      </nav>
+    </div>
+    <div class="flex items-center space-x-4 md:space-x-6 text-[#865140] dark:text-[#c28471]">
+      <button class="hover:opacity-80 transition-opacity duration-300 scale-95 active:duration-150">
+        <span class="material-symbols-outlined">person</span>
+      </button>
+      <a href="carrinho_de_compras.html" class="hover:opacity-80 transition-opacity duration-300 scale-95 active:duration-150 relative">
+        <span class="material-symbols-outlined">shopping_bag</span>
+      </a>
+    </div>
+  </div>
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="hidden fixed inset-0 z-[100] bg-[#faf9f6]/98 backdrop-blur-xl flex flex-col p-8 space-y-8 overflow-y-auto">
+    <div class="flex justify-between items-center">
+      <span class="font-serif text-2xl font-bold tracking-tighter text-[#865140]">MARIA MOURA</span>
+      <button onclick="document.getElementById('mobile-menu').classList.add('hidden')">
+        <span class="material-symbols-outlined text-4xl text-[#865140]">close</span>
+      </button>
+    </div>
+    <nav class="flex flex-col space-y-6 font-serif text-3xl tracking-wide text-stone-800 pt-12">
+      <a href="index.html" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Novidades</a>
+      <a href="listagem_de_produtos.html" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Coleções</a>
+      <a href="listagem_de_produtos.html" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Blusas</a>
+      <a href="listagem_de_produtos.html" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Calças</a>
+      <a href="listagem_de_produtos.html" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Sale</a>
+    </nav>
+    <div class="mt-auto pt-8 border-t border-stone-200 flex flex-col gap-6 text-stone-500 font-serif text-xl">
+      <a href="index.html">Minha Conta</a>
+      <a href="carrinho_de_compras.html" class="flex items-center justify-between">
+        Minha Sacola
+        <span class="material-symbols-outlined">arrow_forward</span>
+      </a>
+    </div>
+  </div>
 </header>
+
 <main>
 <!-- Hero Section -->
-<section class="relative h-[921px] flex items-center overflow-hidden">
+<section class="relative h-[80vh] md:h-[921px] flex items-center overflow-hidden">
 <div class="absolute inset-0 z-0">
-<img alt="Casual Chic Editorial" class="w-full h-full object-cover object-top" data-alt="Elegant woman wearing a tailored off-white linen blazer and silk trousers, minimalist chic aesthetic, high-end fashion photography with soft natural morning light." src="https://i.postimg.cc/dVqMTKbY/1.png"/>
+<img alt="Casual Chic Editorial" class="w-full h-full object-cover object-[center_15%] md:object-top" data-alt="Elegant woman wearing a tailored off-white linen blazer and silk trousers, minimalist chic aesthetic, high-end fashion photography with soft natural morning light." src="https://i.postimg.cc/dVqMTKbY/1.png"/>
 <div class="absolute inset-0 bg-black/5"></div>
 </div>
-<div class="relative z-10 w-full max-w-screen-2xl mx-auto px-12">
+<div class="relative z-10 w-full max-w-screen-2xl mx-auto px-6 md:px-12">
 <div class="max-w-lg bg-surface/40 backdrop-blur-md p-8 inline-block">
 <span class="font-label text-xs uppercase tracking-[0.3em] text-secondary mb-3 block">Nova Coleção</span>
 <h2 class="font-headline text-4xl md:text-6xl leading-tight mb-6 text-on-surface">Sofisticação no seu Dia a Dia</h2>
-<button class="sunset-gradient text-on-primary px-8 py-4 rounded-lg text-xs font-label uppercase tracking-widest hover:opacity-90 transition-all editorial-shadow">
+<a href="listagem_de_produtos.html" class="sunset-gradient text-on-primary px-8 py-4 rounded-lg text-xs font-label uppercase tracking-widest hover:opacity-90 transition-all editorial-shadow inline-block">
                         Explorar Coleção
-                    </button>
+                    </a>
 </div>
 </div>
 </section>
 <!-- Categories Grid (Editorial Asymmetry) -->
-<section class="py-24 px-12 max-w-screen-2xl mx-auto">
-<div class="grid grid-cols-1 md:grid-cols-12 gap-8 h-[800px]">
+<section class="py-24 px-6 md:px-12 max-w-screen-2xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:h-[800px]">
 <div class="md:col-span-4 h-full relative group overflow-hidden">
+<a href="listagem_de_produtos.html">
 <img alt="Blusas" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close up of a premium white silk blouse with delicate button details, soft editorial lighting, minimal background" src="https://i.postimg.cc/W12RJPBt/2.png"/>
 <div class="absolute bottom-8 left-8">
 <h3 class="font-headline text-3xl text-on-surface bg-surface/80 px-6 py-2">Blusas</h3>
 </div>
+</a>
 </div>
 <div class="md:col-span-8 grid grid-rows-2 gap-8">
-<div class="grid grid-cols-2 gap-8">
-<div class="relative group overflow-hidden">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+<div class="relative group overflow-hidden h-80 md:h-auto">
+<a href="listagem_de_produtos.html">
 <img alt="Calças" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Woman wearing high-waisted beige wide-leg trousers walking in a minimalist architectural space, clean lines, warm tones" src="https://i.postimg.cc/0y8gJqTq/3.png"/>
 <div class="absolute bottom-6 left-6">
 <h3 class="font-headline text-2xl text-on-surface bg-surface/80 px-4 py-1">Calças</h3>
 </div>
+</a>
 </div>
-<div class="relative group overflow-hidden">
+<div class="relative group overflow-hidden h-80 md:h-auto">
+<a href="listagem_de_produtos.html">
 <img alt="Vestidos" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Detail of a flowy midi summer dress in sand color, ethereal aesthetic, soft focus, natural textures" src="https://i.postimg.cc/65VJ3QmK/4.png"/>
 <div class="absolute bottom-6 left-6">
 <h3 class="font-headline text-2xl text-on-surface bg-surface/80 px-4 py-1">Vestidos</h3>
 </div>
+</a>
 </div>
 </div>
-<div class="relative group overflow-hidden">
+<div class="relative group overflow-hidden h-80 md:h-auto">
+<a href="listagem_de_produtos.html">
 <img alt="Terceira Peça" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Editorial fashion shot of a woman wearing a camel wool coat draped over shoulders, high-end layering style" src="https://i.postimg.cc/3JQQYG9k/5.png"/>
 <div class="absolute bottom-8 left-8">
 <h3 class="font-headline text-3xl text-on-surface bg-surface/80 px-8 py-3">Terceira Peça</h3>
 </div>
+</a>
 </div>
 </div>
 </div>
@@ -177,53 +213,61 @@
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 <!-- Product Card 1 -->
 <div class="group">
+<a href="pagina_do_produto.html" class="block">
 <div class="relative aspect-[4/5] mb-6 overflow-hidden bg-surface-container-lowest">
 <img alt="Regata Tricot" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100 group-hover:opacity-0" data-alt="Front view of a minimalist cream knit top on a model, soft sunlight, clean background" src="https://i.postimg.cc/wTYYgNFV/6.png"/>
 <img alt="Regata Tricot Costas" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 group-hover:opacity-100" data-alt="Back view of the cream knit top showing detail of the neckline and texture" src="https://i.postimg.cc/fTQQDd50/7.png"/>
-<button class="absolute bottom-4 left-4 right-4 bg-surface/90 backdrop-blur-sm py-3 text-xs uppercase tracking-widest translate-y-12 group-hover:translate-y-0 transition-transform duration-300">
-                                Adicionar à Sacola
-                            </button>
+<span class="absolute bottom-4 left-4 right-4 bg-surface/90 backdrop-blur-sm py-3 text-xs uppercase tracking-widest translate-y-12 group-hover:translate-y-0 transition-transform duration-300 text-center">
+                                Visualizar Produto
+                            </span>
 </div>
-<h4 class="font-headline text-lg mb-1">Regata Tricot Marfil</h4>
+<h4 class="font-headline text-lg mb-1 group-hover:text-primary transition-colors">Regata Tricot Marfil</h4>
+</a>
 <p class="text-primary font-semibold mb-1">R$ 289,00</p>
 <p class="text-secondary text-xs uppercase tracking-wider">3x de R$ 96,33 sem juros</p>
 </div>
 <!-- Product Card 2 -->
 <div class="group">
+<a href="pagina_do_produto.html" class="block">
 <div class="relative aspect-[4/5] mb-6 overflow-hidden bg-surface-container-lowest">
 <img alt="Pantalona Camel" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100 group-hover:opacity-0" data-alt="Full body shot of model wearing camel wide leg pants and a white silk shirt, Parisian street background" src="https://i.postimg.cc/3rvQs1Xz/8.png"/>
 <img alt="Pantalona Camel Costas" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 group-hover:opacity-100" data-alt="Back pocket and tailoring detail of camel wide leg trousers" src="https://i.postimg.cc/05w1TnGs/9.png"/>
-<button class="absolute bottom-4 left-4 right-4 bg-surface/90 backdrop-blur-sm py-3 text-xs uppercase tracking-widest translate-y-12 group-hover:translate-y-0 transition-transform duration-300">
-                                Adicionar à Sacola
-                            </button>
+<span class="absolute bottom-4 left-4 right-4 bg-surface/90 backdrop-blur-sm py-3 text-xs uppercase tracking-widest translate-y-12 group-hover:translate-y-0 transition-transform duration-300 text-center">
+                                Visualizar Produto
+                            </span>
 </div>
-<h4 class="font-headline text-lg mb-1">Pantalona Alfaiataria Camel</h4>
+<h4 class="font-headline text-lg mb-1 group-hover:text-primary transition-colors">Pantalona Alfaiataria Camel</h4>
+</a>
 <p class="text-primary font-semibold mb-1">R$ 459,00</p>
 <p class="text-secondary text-xs uppercase tracking-wider">5x de R$ 91,80 sem juros</p>
 </div>
 <!-- Product Card 3 -->
 <div class="group">
+<a href="pagina_do_produto.html" class="block">
 <div class="relative aspect-[4/5] mb-6 overflow-hidden bg-surface-container-lowest">
 <img alt="Blazer Estruturado" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100 group-hover:opacity-0" data-alt="Model wearing a structured off-white blazer, minimalist studio setting" src="https://i.postimg.cc/kMbP0sNC/10.png"/>
 <img alt="Blazer Estruturado Costas" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 group-hover:opacity-100" data-alt="Back view of the structured off-white blazer showing elegant fit" src="https://i.postimg.cc/kMbP0sNC/10.png"/>
-<button class="absolute bottom-4 left-4 right-4 bg-surface/90 backdrop-blur-sm py-3 text-xs uppercase tracking-widest translate-y-12 group-hover:translate-y-0 transition-transform duration-300">
-                                Adicionar à Sacola
-                            </button>
+<span class="absolute bottom-4 left-4 right-4 bg-surface/90 backdrop-blur-sm py-3 text-xs uppercase tracking-widest translate-y-12 group-hover:translate-y-0 transition-transform duration-300 text-center">
+                                Visualizar Produto
+                            </span>
 </div>
-<h4 class="font-headline text-lg mb-1">Blazer Linho Atemporal</h4>
+<h4 class="font-headline text-lg mb-1 group-hover:text-primary transition-colors">Blazer Linho Atemporal</h4>
+</a>
 <p class="text-primary font-semibold mb-1">R$ 689,00</p>
 <p class="text-secondary text-xs uppercase tracking-wider">6x de R$ 114,83 sem juros</p>
 </div>
 <!-- Product Card 4 -->
 <div class="group">
+<a href="pagina_do_produto.html" class="block">
 <div class="relative aspect-[4/5] mb-6 overflow-hidden bg-surface-container-lowest">
 <img alt="T-Shirt Essential" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100 group-hover:opacity-0" data-alt="Simple white basic tee in high quality pima cotton on model" src="https://i.postimg.cc/kMbP0sNC/10.png"/>
 <img alt="T-Shirt Essential Costas" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 group-hover:opacity-100" data-alt="Back view of essential white t-shirt showing fabric drape" src="https://i.postimg.cc/kMbP0sNC/10.png"/>
-<button class="absolute bottom-4 left-4 right-4 bg-surface/90 backdrop-blur-sm py-3 text-xs uppercase tracking-widest translate-y-12 group-hover:translate-y-0 transition-transform duration-300">
-                                Adicionar à Sacola
-                            </button>
+<span class="absolute bottom-4 left-4 right-4 bg-surface/90 backdrop-blur-sm py-3 text-xs uppercase tracking-widest translate-y-12 group-hover:translate-y-0 transition-transform duration-300 text-center">
+                                Visualizar Produto
+                            </span>
 </div>
-<h4 class="font-headline text-lg mb-1">T-Shirt Essential Algodão</h4>
+<h4 class="font-headline text-lg mb-1 group-hover:text-primary transition-colors">T-Shirt Essential Algodão</h4>
+</a>
 <p class="text-primary font-semibold mb-1">R$ 159,00</p>
 <p class="text-secondary text-xs uppercase tracking-wider">2x de R$ 79,50 sem juros</p>
 </div>
@@ -264,19 +308,19 @@
 <div>
 <h3 class="font-label text-sm uppercase tracking-widest mb-6 font-bold text-[#865140]">Atendimento</h3>
 <ul class="space-y-4 font-sans text-xs font-light text-[#5f5e5e]">
-<li><a class="hover:opacity-70 transition-opacity underline decoration-[#865140] underline-offset-4" href="#">Trocas</a></li>
-<li><a class="hover:opacity-70 transition-opacity" href="#">Frete</a></li>
-<li><a class="hover:opacity-70 transition-opacity" href="#">Pagamento</a></li>
-<li><a class="hover:opacity-70 transition-opacity" href="#">Privacidade</a></li>
+<li><a class="hover:opacity-70 transition-opacity underline decoration-[#865140] underline-offset-4" href="index.html">Trocas</a></li>
+<li><a class="hover:opacity-70 transition-opacity" href="index.html">Frete</a></li>
+<li><a class="hover:opacity-70 transition-opacity" href="index.html">Pagamento</a></li>
+<li><a class="hover:opacity-70 transition-opacity" href="index.html">Privacidade</a></li>
 </ul>
 </div>
 <div>
 <h3 class="font-label text-sm uppercase tracking-widest mb-6 text-[#5f5e5e]">Explore</h3>
 <ul class="space-y-4 font-sans text-xs font-light text-[#5f5e5e]">
-<li><a class="hover:opacity-70 transition-opacity" href="#">Coleções</a></li>
-<li><a class="hover:opacity-70 transition-opacity" href="#">Journal</a></li>
-<li><a class="hover:opacity-70 transition-opacity" href="#">Lojas Físicas</a></li>
-<li><a class="hover:opacity-70 transition-opacity" href="#">Newsletter</a></li>
+<li><a class="hover:opacity-70 transition-opacity" href="index.html">Coleções</a></li>
+<li><a class="hover:opacity-70 transition-opacity" href="index.html">Journal</a></li>
+<li><a class="hover:opacity-70 transition-opacity" href="index.html">Lojas Físicas</a></li>
+<li><a class="hover:opacity-70 transition-opacity" href="index.html">Newsletter</a></li>
 </ul>
 </div>
 <div class="space-y-6">

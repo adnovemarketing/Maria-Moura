@@ -82,35 +82,62 @@
     </style>
 </head>
 <body class="bg-background text-on-surface font-body selection:bg-primary-fixed-dim selection:text-on-primary-fixed">
+
 <!-- TopAppBar -->
-<nav class="bg-[#faf9f6]/80 dark:bg-stone-900/80 backdrop-blur-md docked full-width top-0 sticky z-50 no-border shadow-none bg-surface-container-low">
-<div class="flex justify-between items-center px-8 py-4 w-full max-w-screen-2xl mx-auto">
-<div class="flex items-center gap-8">
-<a class="font-serif text-2xl font-bold tracking-tighter text-[#865140] dark:text-[#c28471]" href="#">MARIA MOURA</a>
-<div class="hidden md:flex gap-6 font-serif text-lg tracking-wide">
-<a class="text-[#5f5e5e] hover:text-[#865140] transition-colors" href="#">Novidades</a>
-<a class="text-[#5f5e5e] hover:text-[#865140] transition-colors" href="#">Coleções</a>
-<a class="text-[#865140] border-b-2 border-[#865140] pb-1" href="#">Blusas</a>
-<a class="text-[#5f5e5e] hover:text-[#865140] transition-colors" href="#">Calças</a>
-<a class="text-[#5f5e5e] hover:text-[#865140] transition-colors" href="#">Sale</a>
-</div>
-</div>
-<div class="flex items-center gap-6">
-<button class="hover:opacity-80 transition-opacity duration-300 scale-95 active:duration-150 text-[#865140]">
-<span class="material-symbols-outlined" data-icon="person">person</span>
-</button>
-<button class="hover:opacity-80 transition-opacity duration-300 scale-95 active:duration-150 text-[#865140] relative">
-<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
-<span class="absolute -top-1 -right-1 w-2 h-2 bg-primary rounded-full"></span>
-</button>
-</div>
-</div>
-</nav>
+<header class="bg-[#faf9f6]/90 dark:bg-stone-900/90 backdrop-blur-md full-width top-0 sticky z-50 transition-all duration-300">
+  <div class="flex justify-between items-center px-6 md:px-8 py-4 w-full max-w-screen-2xl mx-auto">
+    <div class="flex items-center gap-4 md:gap-8">
+      <button class="md:hidden text-[#865140]" onclick="document.getElementById('mobile-menu').classList.remove('hidden')">
+        <span class="material-symbols-outlined text-3xl">menu</span>
+      </button>
+      <a href="index.html" class="font-serif text-xl md:text-2xl font-bold tracking-tighter text-[#865140] dark:text-[#c28471]">MARIA MOURA</a>
+      <nav class="hidden md:flex items-center space-x-8 font-serif text-lg tracking-wide">
+        <a class="nav-link text-[#5f5e5e] hover:text-[#865140] transition-colors" href="index.html">Novidades</a>
+        <a class="nav-link text-[#5f5e5e] hover:text-[#865140] transition-colors" href="listagem_de_produtos.html">Coleções</a>
+        <a class="nav-link text-[#5f5e5e] hover:text-[#865140] transition-colors" href="listagem_de_produtos.html">Blusas</a>
+        <a class="nav-link text-[#5f5e5e] hover:text-[#865140] transition-colors" href="listagem_de_produtos.html">Calças</a>
+        <a class="nav-link text-[#5f5e5e] hover:text-[#865140] transition-colors" href="listagem_de_produtos.html">Sale</a>
+      </nav>
+    </div>
+    <div class="flex items-center space-x-4 md:space-x-6 text-[#865140] dark:text-[#c28471]">
+      <button class="hover:opacity-80 transition-opacity duration-300 scale-95 active:duration-150">
+        <span class="material-symbols-outlined">person</span>
+      </button>
+      <a href="carrinho_de_compras.html" class="hover:opacity-80 transition-opacity duration-300 scale-95 active:duration-150 relative">
+        <span class="material-symbols-outlined">shopping_bag</span>
+      </a>
+    </div>
+  </div>
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="hidden fixed inset-0 z-[100] bg-[#faf9f6]/98 backdrop-blur-xl flex flex-col p-8 space-y-8 overflow-y-auto">
+    <div class="flex justify-between items-center">
+      <span class="font-serif text-2xl font-bold tracking-tighter text-[#865140]">MARIA MOURA</span>
+      <button onclick="document.getElementById('mobile-menu').classList.add('hidden')">
+        <span class="material-symbols-outlined text-4xl text-[#865140]">close</span>
+      </button>
+    </div>
+    <nav class="flex flex-col space-y-6 font-serif text-3xl tracking-wide text-stone-800 pt-12">
+      <a href="index.html" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Novidades</a>
+      <a href="listagem_de_produtos.html" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Coleções</a>
+      <a href="listagem_de_produtos.html" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Blusas</a>
+      <a href="listagem_de_produtos.html" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Calças</a>
+      <a href="listagem_de_produtos.html" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Sale</a>
+    </nav>
+    <div class="mt-auto pt-8 border-t border-stone-200 flex flex-col gap-6 text-stone-500 font-serif text-xl">
+      <a href="index.html">Minha Conta</a>
+      <a href="carrinho_de_compras.html" class="flex items-center justify-between">
+        Minha Sacola
+        <span class="material-symbols-outlined">arrow_forward</span>
+      </a>
+    </div>
+  </div>
+</header>
+
 <main class="max-w-screen-2xl mx-auto px-8 pt-12">
 <!-- Breadcrumbs & Title Section -->
 <header class="mb-16 space-y-4">
 <nav class="text-xs uppercase tracking-widest text-secondary flex gap-2">
-<a class="hover:text-primary transition-colors" href="#">Início</a>
+<a class="hover:text-primary transition-colors" href="index.html">Início</a>
 <span>/</span>
 <span class="text-primary font-bold">Blusas &amp; Tops</span>
 </nav>
@@ -137,10 +164,10 @@
 <section>
 <h3 class="font-label text-xs font-extrabold uppercase tracking-[0.2em] text-on-surface mb-6">Categoria</h3>
 <ul class="space-y-3">
-<li><a class="text-sm text-primary font-semibold flex justify-between items-center" href="#">Blusas &amp; Tops <span class="text-[10px] opacity-50">(42)</span></a></li>
-<li><a class="text-sm text-secondary hover:text-primary transition-colors flex justify-between items-center" href="#">Camisaria <span class="text-[10px] opacity-50">(18)</span></a></li>
-<li><a class="text-sm text-secondary hover:text-primary transition-colors flex justify-between items-center" href="#">Tricot <span class="text-[10px] opacity-50">(12)</span></a></li>
-<li><a class="text-sm text-secondary hover:text-primary transition-colors flex justify-between items-center" href="#">Bodys <span class="text-[10px] opacity-50">(8)</span></a></li>
+<li><a class="text-sm text-primary font-semibold flex justify-between items-center" href="index.html">Blusas &amp; Tops <span class="text-[10px] opacity-50">(42)</span></a></li>
+<li><a class="text-sm text-secondary hover:text-primary transition-colors flex justify-between items-center" href="index.html">Camisaria <span class="text-[10px] opacity-50">(18)</span></a></li>
+<li><a class="text-sm text-secondary hover:text-primary transition-colors flex justify-between items-center" href="index.html">Tricot <span class="text-[10px] opacity-50">(12)</span></a></li>
+<li><a class="text-sm text-secondary hover:text-primary transition-colors flex justify-between items-center" href="index.html">Bodys <span class="text-[10px] opacity-50">(8)</span></a></li>
 </ul>
 </section>
 <!-- Size Filter -->
@@ -186,6 +213,7 @@
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
 <!-- Product Card 1 -->
 <div class="group cursor-pointer">
+<a href="pagina_do_produto.html" class="block">
 <div class="aspect-[4/5] overflow-hidden bg-surface-container-low relative mb-6">
 <span class="absolute top-4 left-4 sunset-gradient text-[10px] text-white px-3 py-1 uppercase tracking-[0.2em] font-bold z-10 shadow-sm">Novidade</span>
 <button class="absolute top-4 right-4 text-primary bg-white/40 backdrop-blur-sm p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
@@ -195,15 +223,17 @@
 </div>
 <div class="space-y-1 px-1">
 <p class="text-[10px] uppercase tracking-widest text-secondary font-semibold">Tecido Natural</p>
-<h3 class="font-serif text-lg text-on-surface">Blusa de Linho Duna</h3>
+<h3 class="font-serif text-lg text-on-surface group-hover:text-primary transition-colors">Blusa de Linho Duna</h3>
 <div class="flex items-center gap-3">
 <p class="text-primary font-bold">R$ 389,00</p>
 <p class="text-secondary text-xs line-through opacity-50">R$ 450,00</p>
 </div>
 </div>
+</a>
 </div>
 <!-- Product Card 2 -->
 <div class="group cursor-pointer">
+<a href="pagina_do_produto.html" class="block">
 <div class="aspect-[4/5] overflow-hidden bg-surface-container-low relative mb-6">
 <span class="absolute top-4 left-4 sunset-gradient text-[10px] text-white px-3 py-1 uppercase tracking-[0.2em] font-bold z-10 shadow-sm">Novidade</span>
 <button class="absolute top-4 right-4 text-primary bg-white/40 backdrop-blur-sm p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
@@ -213,12 +243,14 @@
 </div>
 <div class="space-y-1 px-1">
 <p class="text-[10px] uppercase tracking-widest text-secondary font-semibold">Seda Premium</p>
-<h3 class="font-serif text-lg text-on-surface">Top Assimetria Aérea</h3>
+<h3 class="font-serif text-lg text-on-surface group-hover:text-primary transition-colors">Top Assimetria Aérea</h3>
 <p class="text-primary font-bold">R$ 542,00</p>
 </div>
+</a>
 </div>
 <!-- Product Card 3 -->
 <div class="group cursor-pointer">
+<a href="pagina_do_produto.html" class="block">
 <div class="aspect-[4/5] overflow-hidden bg-surface-container-low relative mb-6">
 <button class="absolute top-4 right-4 text-primary bg-white/40 backdrop-blur-sm p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
 <span class="material-symbols-outlined text-lg" data-icon="favorite">favorite</span>
@@ -227,43 +259,50 @@
 </div>
 <div class="space-y-1 px-1">
 <p class="text-[10px] uppercase tracking-widest text-secondary font-semibold">Tricot Fino</p>
-<h3 class="font-serif text-lg text-on-surface">Regata Canelada Marfim</h3>
+<h3 class="font-serif text-lg text-on-surface group-hover:text-primary transition-colors">Regata Canelada Marfim</h3>
 <p class="text-primary font-bold">R$ 215,00</p>
 </div>
+</a>
 </div>
 <!-- Product Card 4 -->
 <div class="group cursor-pointer">
+<a href="pagina_do_produto.html" class="block">
 <div class="aspect-[4/5] overflow-hidden bg-surface-container-low relative mb-6">
 <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="woman wearing high-waisted dark brown blouse with voluminous sleeves in a high-fashion editorial pose" src="https://i.postimg.cc/65VJ3QmK/4.png"/>
 </div>
 <div class="space-y-1 px-1">
 <p class="text-[10px] uppercase tracking-widest text-secondary font-semibold">Algodão Orgânico</p>
-<h3 class="font-serif text-lg text-on-surface">Blusa Ombro Só Terra</h3>
+<h3 class="font-serif text-lg text-on-surface group-hover:text-primary transition-colors">Blusa Ombro Só Terra</h3>
 <p class="text-primary font-bold">R$ 298,00</p>
 </div>
+</a>
 </div>
 <!-- Product Card 5 -->
 <div class="group cursor-pointer">
+<a href="pagina_do_produto.html" class="block">
 <div class="aspect-[4/5] overflow-hidden bg-surface-container-low relative mb-6">
 <span class="absolute top-4 left-4 sunset-gradient text-[10px] text-white px-3 py-1 uppercase tracking-[0.2em] font-bold z-10 shadow-sm">Novidade</span>
 <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="soft warm beige woven top detail with organic textures and minimalist design aesthetic" src="https://i.postimg.cc/3JQQYG9k/5.png"/>
 </div>
 <div class="space-y-1 px-1">
 <p class="text-[10px] uppercase tracking-widest text-secondary font-semibold">Limited Edition</p>
-<h3 class="font-serif text-lg text-on-surface">Blazer Cropped Noz</h3>
+<h3 class="font-serif text-lg text-on-surface group-hover:text-primary transition-colors">Blazer Cropped Noz</h3>
 <p class="text-primary font-bold">R$ 680,00</p>
 </div>
+</a>
 </div>
 <!-- Product Card 6 -->
 <div class="group cursor-pointer">
+<a href="pagina_do_produto.html" class="block">
 <div class="aspect-[4/5] overflow-hidden bg-surface-container-low relative mb-6">
 <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="luxury apparel flatlay with terracotta and earth toned garments on a minimalist white surface" src="https://i.postimg.cc/wTYYgNFV/6.png"/>
 </div>
 <div class="space-y-1 px-1">
 <p class="text-[10px] uppercase tracking-widest text-secondary font-semibold">Essencial</p>
-<h3 class="font-serif text-lg text-on-surface">T-shirt Algodão Egípcio</h3>
+<h3 class="font-serif text-lg text-on-surface group-hover:text-primary transition-colors">T-shirt Algodão Egípcio</h3>
 <p class="text-primary font-bold">R$ 159,00</p>
 </div>
+</a>
 </div>
 </div>
 <!-- Pagination -->
@@ -295,17 +334,17 @@
 <div class="space-y-4">
 <h4 class="font-sans text-xs font-bold uppercase tracking-widest text-[#865140]">Atendimento</h4>
 <ul class="space-y-2 font-sans text-xs font-light text-[#5f5e5e]">
-<li><a class="hover:opacity-70 underline-offset-4 hover:underline decoration-[#865140]" href="#">Trocas</a></li>
-<li><a class="hover:opacity-70 underline-offset-4 hover:underline decoration-[#865140]" href="#">Frete</a></li>
-<li><a class="hover:opacity-70 underline-offset-4 hover:underline decoration-[#865140]" href="#">Pagamento</a></li>
-<li><a class="hover:opacity-70 underline-offset-4 hover:underline decoration-[#865140]" href="#">Newsletter</a></li>
+<li><a class="hover:opacity-70 underline-offset-4 hover:underline decoration-[#865140]" href="index.html">Trocas</a></li>
+<li><a class="hover:opacity-70 underline-offset-4 hover:underline decoration-[#865140]" href="index.html">Frete</a></li>
+<li><a class="hover:opacity-70 underline-offset-4 hover:underline decoration-[#865140]" href="index.html">Pagamento</a></li>
+<li><a class="hover:opacity-70 underline-offset-4 hover:underline decoration-[#865140]" href="index.html">Newsletter</a></li>
 </ul>
 </div>
 <div class="space-y-4">
 <h4 class="font-sans text-xs font-bold uppercase tracking-widest text-[#865140]">Siga-nos</h4>
 <div class="flex gap-4">
-<a class="text-[#5f5e5e] hover:opacity-70 transition-opacity" href="#"><span class="material-symbols-outlined">camera</span></a>
-<a class="text-[#5f5e5e] hover:opacity-70 transition-opacity" href="#"><span class="material-symbols-outlined">brand_awareness</span></a>
+<a class="text-[#5f5e5e] hover:opacity-70 transition-opacity" href="index.html"><span class="material-symbols-outlined">camera</span></a>
+<a class="text-[#5f5e5e] hover:opacity-70 transition-opacity" href="index.html"><span class="material-symbols-outlined">brand_awareness</span></a>
 </div>
 </div>
 <div class="space-y-6">

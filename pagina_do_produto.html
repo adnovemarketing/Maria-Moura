@@ -88,30 +88,57 @@
     </style>
 </head>
 <body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container">
+
 <!-- TopAppBar -->
-<header class="bg-[#faf9f6]/80 dark:bg-stone-900/80 backdrop-blur-md docked full-width top-0 sticky z-50 transition-opacity duration-300">
-<div class="flex justify-between items-center px-8 py-4 w-full max-w-screen-2xl mx-auto">
-<div class="flex items-center gap-8">
-<h1 class="font-serif text-2xl font-bold tracking-tighter text-[#865140] dark:text-[#c28471]">MARIA MOURA</h1>
-<nav class="hidden md:flex gap-6 font-serif text-lg tracking-wide">
-<a class="text-[#5f5e5e] hover:text-[#865140] transition-colors" href="#">Novidades</a>
-<a class="text-[#865140] border-b-2 border-[#865140] pb-1" href="#">Coleções</a>
-<a class="text-[#5f5e5e] hover:text-[#865140] transition-colors" href="#">Blusas</a>
-<a class="text-[#5f5e5e] hover:text-[#865140] transition-colors" href="#">Calças</a>
-<a class="text-[#5f5e5e] hover:text-[#865140] transition-colors" href="#">Sale</a>
-</nav>
-</div>
-<div class="flex items-center gap-4 text-[#865140] dark:text-[#c28471]">
-<button class="hover:opacity-80 transition-opacity duration-300 scale-95 active:duration-150">
-<span class="material-symbols-outlined">person</span>
-</button>
-<button class="hover:opacity-80 transition-opacity duration-300 scale-95 active:duration-150 relative">
-<span class="material-symbols-outlined">shopping_bag</span>
-<span class="absolute -top-1 -right-1 bg-primary text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full">2</span>
-</button>
-</div>
-</div>
+<header class="bg-[#faf9f6]/90 dark:bg-stone-900/90 backdrop-blur-md full-width top-0 sticky z-50 transition-all duration-300">
+  <div class="flex justify-between items-center px-6 md:px-8 py-4 w-full max-w-screen-2xl mx-auto">
+    <div class="flex items-center gap-4 md:gap-8">
+      <button class="md:hidden text-[#865140]" onclick="document.getElementById('mobile-menu').classList.remove('hidden')">
+        <span class="material-symbols-outlined text-3xl">menu</span>
+      </button>
+      <a href="index.html" class="font-serif text-xl md:text-2xl font-bold tracking-tighter text-[#865140] dark:text-[#c28471]">MARIA MOURA</a>
+      <nav class="hidden md:flex items-center space-x-8 font-serif text-lg tracking-wide">
+        <a class="nav-link text-[#5f5e5e] hover:text-[#865140] transition-colors" href="index.html">Novidades</a>
+        <a class="nav-link text-[#5f5e5e] hover:text-[#865140] transition-colors" href="listagem_de_produtos.html">Coleções</a>
+        <a class="nav-link text-[#5f5e5e] hover:text-[#865140] transition-colors" href="listagem_de_produtos.html">Blusas</a>
+        <a class="nav-link text-[#5f5e5e] hover:text-[#865140] transition-colors" href="listagem_de_produtos.html">Calças</a>
+        <a class="nav-link text-[#5f5e5e] hover:text-[#865140] transition-colors" href="listagem_de_produtos.html">Sale</a>
+      </nav>
+    </div>
+    <div class="flex items-center space-x-4 md:space-x-6 text-[#865140] dark:text-[#c28471]">
+      <button class="hover:opacity-80 transition-opacity duration-300 scale-95 active:duration-150">
+        <span class="material-symbols-outlined">person</span>
+      </button>
+      <a href="carrinho_de_compras.html" class="hover:opacity-80 transition-opacity duration-300 scale-95 active:duration-150 relative">
+        <span class="material-symbols-outlined">shopping_bag</span>
+      </a>
+    </div>
+  </div>
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="hidden fixed inset-0 z-[100] bg-[#faf9f6]/98 backdrop-blur-xl flex flex-col p-8 space-y-8 overflow-y-auto">
+    <div class="flex justify-between items-center">
+      <span class="font-serif text-2xl font-bold tracking-tighter text-[#865140]">MARIA MOURA</span>
+      <button onclick="document.getElementById('mobile-menu').classList.add('hidden')">
+        <span class="material-symbols-outlined text-4xl text-[#865140]">close</span>
+      </button>
+    </div>
+    <nav class="flex flex-col space-y-6 font-serif text-3xl tracking-wide text-stone-800 pt-12">
+      <a href="index.html" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Novidades</a>
+      <a href="listagem_de_produtos.html" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Coleções</a>
+      <a href="listagem_de_produtos.html" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Blusas</a>
+      <a href="listagem_de_produtos.html" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Calças</a>
+      <a href="listagem_de_produtos.html" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Sale</a>
+    </nav>
+    <div class="mt-auto pt-8 border-t border-stone-200 flex flex-col gap-6 text-stone-500 font-serif text-xl">
+      <a href="index.html">Minha Conta</a>
+      <a href="carrinho_de_compras.html" class="flex items-center justify-between">
+        Minha Sacola
+        <span class="material-symbols-outlined">arrow_forward</span>
+      </a>
+    </div>
+  </div>
 </header>
+
 <main class="max-w-screen-2xl mx-auto px-8 pt-12">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
 <!-- Left: Gallery Section -->
@@ -226,7 +253,7 @@
 <section class="mt-32 mb-20">
 <div class="flex items-baseline justify-between mb-12">
 <h3 class="font-headline text-3xl">Complete o Look</h3>
-<a class="text-xs uppercase tracking-widest font-bold border-b border-primary pb-1" href="#">Ver coleção completa</a>
+<a class="text-xs uppercase tracking-widest font-bold border-b border-primary pb-1" href="index.html">Ver coleção completa</a>
 </div>
 <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
 <!-- Look Item 1 -->
@@ -280,17 +307,17 @@
 <div class="flex flex-col gap-4">
 <h4 class="font-sans text-xs font-bold uppercase tracking-widest text-[#865140]">Atendimento</h4>
 <nav class="flex flex-col gap-2 font-sans text-xs font-light text-[#5f5e5e]">
-<a class="underline decoration-[#865140] underline-offset-4 opacity-100 hover:opacity-70" href="#">Trocas</a>
-<a class="underline decoration-[#865140] underline-offset-4 opacity-100 hover:opacity-70" href="#">Frete</a>
-<a class="underline decoration-[#865140] underline-offset-4 opacity-100 hover:opacity-70" href="#">Pagamento</a>
+<a class="underline decoration-[#865140] underline-offset-4 opacity-100 hover:opacity-70" href="index.html">Trocas</a>
+<a class="underline decoration-[#865140] underline-offset-4 opacity-100 hover:opacity-70" href="index.html">Frete</a>
+<a class="underline decoration-[#865140] underline-offset-4 opacity-100 hover:opacity-70" href="index.html">Pagamento</a>
 </nav>
 </div>
 <div class="flex flex-col gap-4">
 <h4 class="font-sans text-xs font-bold uppercase tracking-widest text-[#865140]">Explorar</h4>
 <nav class="flex flex-col gap-2 font-sans text-xs font-light text-[#5f5e5e]">
-<a class="underline decoration-[#865140] underline-offset-4 opacity-100 hover:opacity-70" href="#">Novidades</a>
-<a class="font-bold text-[#865140] underline decoration-[#865140] underline-offset-4 opacity-100 hover:opacity-70" href="#">Coleções</a>
-<a class="underline decoration-[#865140] underline-offset-4 opacity-100 hover:opacity-70" href="#">Newsletter</a>
+<a class="underline decoration-[#865140] underline-offset-4 opacity-100 hover:opacity-70" href="index.html">Novidades</a>
+<a class="font-bold text-[#865140] underline decoration-[#865140] underline-offset-4 opacity-100 hover:opacity-70" href="index.html">Coleções</a>
+<a class="underline decoration-[#865140] underline-offset-4 opacity-100 hover:opacity-70" href="index.html">Newsletter</a>
 </nav>
 </div>
 <div class="space-y-4">
