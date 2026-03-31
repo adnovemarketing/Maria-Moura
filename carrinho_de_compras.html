@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@300;400;600;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-lowest": "#ffffff",
+              "secondary-container": "#e4e2e1",
+              "on-tertiary": "#ffffff",
+              "tertiary-fixed": "#f3e0c0",
+              "surface-bright": "#faf9f6",
+              "secondary-fixed-dim": "#c8c6c6",
+              "surface-container-high": "#e9e8e5",
+              "primary": "#865140",
+              "on-primary": "#ffffff",
+              "tertiary": "#6a5d43",
+              "inverse-primary": "#fbb6a1",
+              "surface-container": "#efeeeb",
+              "surface-container-low": "#f4f3f1",
+              "on-primary-container": "#492012",
+              "on-error": "#ffffff",
+              "on-secondary-container": "#656464",
+              "background": "#faf9f6",
+              "on-secondary": "#ffffff",
+              "surface-tint": "#865140",
+              "outline-variant": "#d7c2bc",
+              "primary-fixed": "#ffdbd0",
+              "primary-container": "#c28471",
+              "surface-variant": "#e3e2e0",
+              "on-surface-variant": "#52443f",
+              "on-secondary-fixed-variant": "#474747",
+              "error-container": "#ffdad6",
+              "on-primary-fixed-variant": "#6a3a2b",
+              "on-tertiary-fixed": "#231a06",
+              "on-surface": "#1a1c1a",
+              "on-tertiary-container": "#352a15",
+              "tertiary-container": "#a19174",
+              "on-secondary-fixed": "#1b1c1c",
+              "surface-dim": "#dbdad7",
+              "secondary": "#5f5e5e",
+              "on-error-container": "#93000a",
+              "outline": "#84736f",
+              "primary-fixed-dim": "#fbb6a1",
+              "inverse-on-surface": "#f2f1ee",
+              "surface": "#faf9f6",
+              "on-primary-fixed": "#351005",
+              "error": "#ba1a1a",
+              "secondary-fixed": "#e4e2e1",
+              "on-tertiary-fixed-variant": "#51452d",
+              "on-background": "#1a1c1a",
+              "inverse-surface": "#2f312f",
+              "surface-container-highest": "#e3e2e0",
+              "tertiary-fixed-dim": "#d6c4a5"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .sunset-gradient {
+        background: linear-gradient(135deg, #865140 0%, #c28471 100%);
+      }
+    </style>
+</head>
+<body class="bg-background font-body text-on-background selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="bg-[#faf9f6]/80 dark:bg-stone-900/80 backdrop-blur-md text-[#865140] dark:text-[#c28471] font-serif text-lg tracking-wide docked full-width top-0 sticky z-50 no-border shadow-none bg-surface-container-low">
+<div class="flex justify-between items-center px-8 py-4 w-full max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-12">
+<h1 class="font-serif text-2xl font-bold tracking-tighter text-[#865140] dark:text-[#c28471]">MARIA MOURA</h1>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-[#5f5e5e] hover:text-[#865140] transition-colors hover:opacity-80 transition-opacity duration-300" href="#">Novidades</a>
+<a class="text-[#5f5e5e] hover:text-[#865140] transition-colors hover:opacity-80 transition-opacity duration-300" href="#">Coleções</a>
+<a class="text-[#5f5e5e] hover:text-[#865140] transition-colors hover:opacity-80 transition-opacity duration-300" href="#">Blusas</a>
+<a class="text-[#5f5e5e] hover:text-[#865140] transition-colors hover:opacity-80 transition-opacity duration-300" href="#">Calças</a>
+<a class="text-[#5f5e5e] hover:text-[#865140] transition-colors hover:opacity-80 transition-opacity duration-300" href="#">Sale</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<button class="hover:opacity-80 transition-opacity duration-300 scale-95 active:duration-150">
+<span class="material-symbols-outlined">person</span>
+</button>
+<button class="hover:opacity-80 transition-opacity duration-300 scale-95 active:duration-150 relative">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="absolute -top-1 -right-1 bg-primary text-on-primary text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">2</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-screen-2xl mx-auto px-8 pt-12 pb-24">
+<!-- Breadcrumb & Header -->
+<div class="mb-12">
+<h2 class="font-headline text-4xl mb-4">Sua Sacola</h2>
+<div class="flex items-center gap-2 text-secondary text-sm">
+<span>Início</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-primary font-semibold">Carrinho de Compras</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+<!-- Items List -->
+<div class="lg:col-span-8 space-y-10">
+<!-- Cart Item 1 -->
+<div class="flex gap-8 group">
+<div class="w-40 aspect-[4/5] bg-surface-container-low overflow-hidden rounded-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Editorial portrait of a high-end linen blouse in terracotta color, soft natural window light, minimalist studio setting" src="https://i.postimg.cc/dVqMTKbY/1.png"/>
+</div>
+<div class="flex-1 flex flex-col justify-between py-2">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline text-xl mb-2">Blusa de Linho Atenas</h3>
+<p class="text-secondary text-sm font-light tracking-wide uppercase">Terracota | Tamanho M</p>
+</div>
+<button class="text-secondary hover:text-error transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="flex justify-between items-end">
+<div class="flex items-center border-b border-outline-variant pb-1 w-24">
+<button class="p-1"><span class="material-symbols-outlined text-sm">remove</span></button>
+<input class="w-full text-center border-none bg-transparent focus:ring-0 text-sm font-medium" type="text" value="1"/>
+<button class="p-1"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+<span class="font-headline text-xl text-primary">R$ 389,00</span>
+</div>
+</div>
+</div>
+<!-- Cart Item 2 -->
+<div class="flex gap-8 group">
+<div class="w-40 aspect-[4/5] bg-surface-container-low overflow-hidden rounded-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Close up of high-quality denim trousers on a minimalist wooden chair, soft morning light, sophisticated texture details" src="https://i.postimg.cc/W12RJPBt/2.png"/>
+</div>
+<div class="flex-1 flex flex-col justify-between py-2">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline text-xl mb-2">Calça Denim Raw High-Waist</h3>
+<p class="text-secondary text-sm font-light tracking-wide uppercase">Azul Índigo | Tamanho 38</p>
+</div>
+<button class="text-secondary hover:text-error transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="flex justify-between items-end">
+<div class="flex items-center border-b border-outline-variant pb-1 w-24">
+<button class="p-1"><span class="material-symbols-outlined text-sm">remove</span></button>
+<input class="w-full text-center border-none bg-transparent focus:ring-0 text-sm font-medium" type="text" value="1"/>
+<button class="p-1"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+<span class="font-headline text-xl text-primary">R$ 542,00</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Summary -->
+<aside class="lg:col-span-4">
+<div class="bg-surface-container-low p-8 sticky top-28 space-y-8">
+<h3 class="font-headline text-2xl">Resumo do Pedido</h3>
+<div class="space-y-4 text-secondary">
+<div class="flex justify-between">
+<span class="font-light">Subtotal</span>
+<span class="font-medium text-on-surface">R$ 931,00</span>
+</div>
+<div class="flex justify-between">
+<span class="font-light">Frete Estimado</span>
+<span class="font-medium text-on-surface">R$ 25,00</span>
+</div>
+<div class="pt-4 border-t border-outline-variant flex justify-between">
+<span class="font-headline text-lg text-on-surface">Total</span>
+<span class="font-headline text-2xl text-primary">R$ 956,00</span>
+</div>
+</div>
+<div class="space-y-4">
+<label class="block text-xs font-bold uppercase tracking-widest text-secondary">Cupom de Desconto</label>
+<div class="flex gap-2">
+<input class="flex-1 bg-transparent border-none border-b border-outline-variant focus:border-primary focus:ring-0 text-sm py-2" placeholder="INSIRA O CÓDIGO" type="text"/>
+<button class="text-primary font-bold text-xs uppercase tracking-tighter hover:opacity-70 transition-opacity">Aplicar</button>
+</div>
+</div>
+<button class="w-full py-4 sunset-gradient text-on-primary font-bold tracking-widest uppercase rounded-lg shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1">
+                        Finalizar Compra
+                    </button>
+<!-- Payment & Security -->
+<div class="space-y-6 pt-4">
+<div class="flex justify-center gap-4 opacity-60">
+<span class="material-symbols-outlined text-3xl">credit_card</span>
+<span class="material-symbols-outlined text-3xl">account_balance_wallet</span>
+<span class="material-symbols-outlined text-3xl">payments</span>
+</div>
+<div class="flex items-center justify-center gap-2 text-[10px] text-secondary uppercase tracking-[0.2em]">
+<span class="material-symbols-outlined text-sm">verified_user</span>
+                            Ambiente 100% Seguro
+                        </div>
+</div>
+</div>
+</aside>
+</div>
+<!-- Recommendations -->
+<section class="mt-32">
+<h3 class="font-headline text-3xl mb-12 text-center">Você também pode gostar</h3>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<!-- Item 1 -->
+<div class="space-y-4 group">
+<div class="aspect-[4/5] bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Aesthetic shot of a luxury silk scarf draped over a porcelain bust, soft afternoon light, elegant textures" src="https://i.postimg.cc/0y8gJqTq/3.png"/>
+</div>
+<div class="text-center">
+<h4 class="font-body text-sm uppercase tracking-widest text-on-surface">Lenço Seda Orquídea</h4>
+<p class="text-primary font-headline text-lg mt-1">R$ 215,00</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="space-y-4 group">
+<div class="aspect-[4/5] bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Premium leather handbag in tan color resting on a beige stone surface, warm moody lighting, high fashion photography" src="https://i.postimg.cc/65VJ3QmK/4.png"/>
+</div>
+<div class="text-center">
+<h4 class="font-body text-sm uppercase tracking-widest text-on-surface">Bolsa Couro Nude</h4>
+<p class="text-primary font-headline text-lg mt-1">R$ 890,00</p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="space-y-4 group">
+<div class="aspect-[4/5] bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Detail shot of gold minimalist earrings against a dark velvet background, dramatic lighting, sharp focus on craftsmanship" src="https://i.postimg.cc/3JQQYG9k/5.png"/>
+</div>
+<div class="text-center">
+<h4 class="font-body text-sm uppercase tracking-widest text-on-surface">Brinco Gota Ouro 18k</h4>
+<p class="text-primary font-headline text-lg mt-1">R$ 440,00</p>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="space-y-4 group">
+<div class="aspect-[4/5] bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="High-end cotton knit sweater in off-white, editorial composition on a light textured wall, soft diffuse light" src="https://i.postimg.cc/wTYYgNFV/6.png"/>
+</div>
+<div class="text-center">
+<h4 class="font-body text-sm uppercase tracking-widest text-on-surface">Tricot Soft White</h4>
+<p class="text-primary font-headline text-lg mt-1">R$ 310,00</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#dbdad7] dark:bg-stone-800 text-[#865140] dark:text-[#c28471] font-sans text-xs font-light w-full border-t-0 mt-20 tonal-shift using surface-dim">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-16 w-full max-w-screen-2xl mx-auto">
+<div class="space-y-6">
+<h4 class="font-serif text-xl text-[#5f5e5e]">MARIA MOURA</h4>
+<p class="leading-relaxed opacity-70">Curadoria exclusiva de moda feminina com alma editorial e design atemporal.</p>
+</div>
+<div class="space-y-4">
+<h5 class="font-bold uppercase tracking-widest text-on-surface">Ajuda</h5>
+<ul class="space-y-2">
+<li><a class="text-[#5f5e5e] hover:opacity-70 transition-opacity underline-offset-4 hover:underline decoration-[#865140]" href="#">Trocas</a></li>
+<li><a class="text-[#5f5e5e] hover:opacity-70 transition-opacity underline-offset-4 hover:underline decoration-[#865140]" href="#">Frete</a></li>
+<li><a class="text-[#5f5e5e] hover:opacity-70 transition-opacity underline-offset-4 hover:underline decoration-[#865140]" href="#">Pagamento</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h5 class="font-bold uppercase tracking-widest text-on-surface">Conecte-se</h5>
+<ul class="space-y-2">
+<li><a class="text-[#5f5e5e] hover:opacity-70 transition-opacity underline-offset-4 hover:underline decoration-[#865140]" href="#">Instagram</a></li>
+<li><a class="text-[#5f5e5e] hover:opacity-70 transition-opacity underline-offset-4 hover:underline decoration-[#865140]" href="#">Newsletter</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h5 class="font-bold uppercase tracking-widest text-on-surface">News</h5>
+<p class="opacity-70">Receba nossas coleções em primeira mão.</p>
+<div class="flex border-b border-outline">
+<input class="bg-transparent border-none focus:ring-0 text-xs w-full py-2" placeholder="Seu e-mail" type="email"/>
+<button class="material-symbols-outlined">arrow_forward</button>
+</div>
+</div>
+</div>
+<div class="px-12 py-8 border-t border-surface-container text-center opacity-50">
+            © 2024 MARIA MOURA. Todos os direitos reservados.
+        </div>
+</footer>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/551931405902" target="_blank" rel="noopener noreferrer" class="fixed bottom-8 right-8 z-[100] flex items-center justify-center p-0 w-16 h-16 bg-[#25D366] text-white rounded-full shadow-2xl hover:scale-110 transition-transform active:scale-95 group" aria-label="Fale conosco no WhatsApp">
+    <svg viewBox="0 0 24 24" class="w-9 h-9 fill-current">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span class="absolute right-full mr-4 bg-white text-stone-800 px-4 py-2 rounded-lg text-xs uppercase tracking-widest font-bold shadow-xl opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+        Fale Conosco
+    </span>
+</a>
+
+</body></html>

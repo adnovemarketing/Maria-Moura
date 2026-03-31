@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@300;400;600;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-lowest": "#ffffff",
+              "secondary-container": "#e4e2e1",
+              "on-tertiary": "#ffffff",
+              "tertiary-fixed": "#f3e0c0",
+              "surface-bright": "#faf9f6",
+              "secondary-fixed-dim": "#c8c6c6",
+              "surface-container-high": "#e9e8e5",
+              "primary": "#865140",
+              "on-primary": "#ffffff",
+              "tertiary": "#6a5d43",
+              "inverse-primary": "#fbb6a1",
+              "surface-container": "#efeeeb",
+              "surface-container-low": "#f4f3f1",
+              "on-primary-container": "#492012",
+              "on-error": "#ffffff",
+              "on-secondary-container": "#656464",
+              "background": "#faf9f6",
+              "on-secondary": "#ffffff",
+              "surface-tint": "#865140",
+              "outline-variant": "#d7c2bc",
+              "primary-fixed": "#ffdbd0",
+              "primary-container": "#c28471",
+              "surface-variant": "#e3e2e0",
+              "on-surface-variant": "#52443f",
+              "on-secondary-fixed-variant": "#474747",
+              "error-container": "#ffdad6",
+              "on-primary-fixed-variant": "#6a3a2b",
+              "on-tertiary-fixed": "#231a06",
+              "on-surface": "#1a1c1a",
+              "on-tertiary-container": "#352a15",
+              "tertiary-container": "#a19174",
+              "on-secondary-fixed": "#1b1c1c",
+              "surface-dim": "#dbdad7",
+              "secondary": "#5f5e5e",
+              "on-error-container": "#93000a",
+              "outline": "#84736f",
+              "primary-fixed-dim": "#fbb6a1",
+              "inverse-on-surface": "#f2f1ee",
+              "surface": "#faf9f6",
+              "on-primary-fixed": "#351005",
+              "error": "#ba1a1a",
+              "secondary-fixed": "#e4e2e1",
+              "on-tertiary-fixed-variant": "#51452d",
+              "on-background": "#1a1c1a",
+              "inverse-surface": "#2f312f",
+              "surface-container-highest": "#e3e2e0",
+              "tertiary-fixed-dim": "#d6c4a5"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .sunset-gradient {
+            background: linear-gradient(135deg, #865140 0%, #c28471 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-fixed-dim selection:text-on-primary-fixed">
+<!-- TopAppBar -->
+<nav class="bg-[#faf9f6]/80 dark:bg-stone-900/80 backdrop-blur-md docked full-width top-0 sticky z-50 no-border shadow-none bg-surface-container-low">
+<div class="flex justify-between items-center px-8 py-4 w-full max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-8">
+<a class="font-serif text-2xl font-bold tracking-tighter text-[#865140] dark:text-[#c28471]" href="#">MARIA MOURA</a>
+<div class="hidden md:flex gap-6 font-serif text-lg tracking-wide">
+<a class="text-[#5f5e5e] hover:text-[#865140] transition-colors" href="#">Novidades</a>
+<a class="text-[#5f5e5e] hover:text-[#865140] transition-colors" href="#">Coleções</a>
+<a class="text-[#865140] border-b-2 border-[#865140] pb-1" href="#">Blusas</a>
+<a class="text-[#5f5e5e] hover:text-[#865140] transition-colors" href="#">Calças</a>
+<a class="text-[#5f5e5e] hover:text-[#865140] transition-colors" href="#">Sale</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="hover:opacity-80 transition-opacity duration-300 scale-95 active:duration-150 text-[#865140]">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+<button class="hover:opacity-80 transition-opacity duration-300 scale-95 active:duration-150 text-[#865140] relative">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span class="absolute -top-1 -right-1 w-2 h-2 bg-primary rounded-full"></span>
+</button>
+</div>
+</div>
+</nav>
+<main class="max-w-screen-2xl mx-auto px-8 pt-12">
+<!-- Breadcrumbs & Title Section -->
+<header class="mb-16 space-y-4">
+<nav class="text-xs uppercase tracking-widest text-secondary flex gap-2">
+<a class="hover:text-primary transition-colors" href="#">Início</a>
+<span>/</span>
+<span class="text-primary font-bold">Blusas &amp; Tops</span>
+</nav>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<h1 class="font-headline text-5xl md:text-6xl text-primary font-bold tracking-tight">Blusas &amp; Tops</h1>
+<p class="text-secondary mt-4 max-w-lg font-light leading-relaxed">Peças atemporais em tecidos naturais e cortes precisos. Do linho à seda, a sofisticação encontra o conforto para o seu dia a dia no atelier.</p>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-xs font-label uppercase tracking-widest text-secondary">Ordenar por</span>
+<div class="relative group">
+<button class="flex items-center gap-2 border-b border-outline-variant pb-1 font-label text-sm uppercase tracking-wider text-on-surface">
+                            Mais Relevantes
+                            <span class="material-symbols-outlined text-sm" data-icon="expand_more">expand_more</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<div class="flex flex-col md:flex-row gap-16">
+<!-- Sidebar Filters -->
+<aside class="w-full md:w-64 space-y-12 shrink-0">
+<!-- Category Filter -->
+<section>
+<h3 class="font-label text-xs font-extrabold uppercase tracking-[0.2em] text-on-surface mb-6">Categoria</h3>
+<ul class="space-y-3">
+<li><a class="text-sm text-primary font-semibold flex justify-between items-center" href="#">Blusas &amp; Tops <span class="text-[10px] opacity-50">(42)</span></a></li>
+<li><a class="text-sm text-secondary hover:text-primary transition-colors flex justify-between items-center" href="#">Camisaria <span class="text-[10px] opacity-50">(18)</span></a></li>
+<li><a class="text-sm text-secondary hover:text-primary transition-colors flex justify-between items-center" href="#">Tricot <span class="text-[10px] opacity-50">(12)</span></a></li>
+<li><a class="text-sm text-secondary hover:text-primary transition-colors flex justify-between items-center" href="#">Bodys <span class="text-[10px] opacity-50">(8)</span></a></li>
+</ul>
+</section>
+<!-- Size Filter -->
+<section>
+<h3 class="font-label text-xs font-extrabold uppercase tracking-[0.2em] text-on-surface mb-6">Tamanho</h3>
+<div class="grid grid-cols-3 gap-2">
+<button class="py-3 border border-outline-variant text-xs hover:border-primary hover:text-primary transition-all rounded-sm uppercase tracking-tighter">PP</button>
+<button class="py-3 border border-primary bg-primary text-white text-xs rounded-sm uppercase tracking-tighter shadow-sm">P</button>
+<button class="py-3 border border-outline-variant text-xs hover:border-primary hover:text-primary transition-all rounded-sm uppercase tracking-tighter">M</button>
+<button class="py-3 border border-outline-variant text-xs hover:border-primary hover:text-primary transition-all rounded-sm uppercase tracking-tighter">G</button>
+<button class="py-3 border border-outline-variant text-xs hover:border-primary hover:text-primary transition-all rounded-sm uppercase tracking-tighter">GG</button>
+</div>
+</section>
+<!-- Color Filter -->
+<section>
+<h3 class="font-label text-xs font-extrabold uppercase tracking-[0.2em] text-on-surface mb-6">Cores Terrosas</h3>
+<div class="flex flex-wrap gap-3">
+<button class="w-8 h-8 rounded-full bg-[#865140] ring-offset-2 ring-1 ring-primary p-0.5" title="Terracota"></button>
+<button class="w-8 h-8 rounded-full bg-[#c28471]" title="Nude"></button>
+<button class="w-8 h-8 rounded-full bg-[#d2b48c]" title="Areia"></button>
+<button class="w-8 h-8 rounded-full bg-[#4a3728]" title="Café"></button>
+<button class="w-8 h-8 rounded-full bg-[#f4ece1] ring-1 ring-outline-variant" title="Off-white"></button>
+</div>
+</section>
+<!-- Price Filter -->
+<section>
+<h3 class="font-label text-xs font-extrabold uppercase tracking-[0.2em] text-on-surface mb-6">Faixa de Preço</h3>
+<div class="space-y-4">
+<div class="h-1 bg-surface-container-high relative rounded-full">
+<div class="absolute h-1 bg-primary left-4 right-12 rounded-full"></div>
+<div class="absolute w-3 h-3 bg-white border-2 border-primary rounded-full top-1/2 -translate-y-1/2 left-4"></div>
+<div class="absolute w-3 h-3 bg-white border-2 border-primary rounded-full top-1/2 -translate-y-1/2 right-12"></div>
+</div>
+<div class="flex justify-between text-[10px] text-secondary uppercase tracking-widest">
+<span>R$ 150</span>
+<span>R$ 890</span>
+</div>
+</div>
+</section>
+</aside>
+<!-- Product Grid -->
+<div class="flex-1">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+<!-- Product Card 1 -->
+<div class="group cursor-pointer">
+<div class="aspect-[4/5] overflow-hidden bg-surface-container-low relative mb-6">
+<span class="absolute top-4 left-4 sunset-gradient text-[10px] text-white px-3 py-1 uppercase tracking-[0.2em] font-bold z-10 shadow-sm">Novidade</span>
+<button class="absolute top-4 right-4 text-primary bg-white/40 backdrop-blur-sm p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-lg" data-icon="favorite">favorite</span>
+</button>
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="editorial shot of woman in high-end terracotta linen top leaning against textured concrete wall in soft natural light" src="https://i.postimg.cc/dVqMTKbY/1.png"/>
+</div>
+<div class="space-y-1 px-1">
+<p class="text-[10px] uppercase tracking-widest text-secondary font-semibold">Tecido Natural</p>
+<h3 class="font-serif text-lg text-on-surface">Blusa de Linho Duna</h3>
+<div class="flex items-center gap-3">
+<p class="text-primary font-bold">R$ 389,00</p>
+<p class="text-secondary text-xs line-through opacity-50">R$ 450,00</p>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group cursor-pointer">
+<div class="aspect-[4/5] overflow-hidden bg-surface-container-low relative mb-6">
+<span class="absolute top-4 left-4 sunset-gradient text-[10px] text-white px-3 py-1 uppercase tracking-[0.2em] font-bold z-10 shadow-sm">Novidade</span>
+<button class="absolute top-4 right-4 text-primary bg-white/40 backdrop-blur-sm p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-lg" data-icon="favorite">favorite</span>
+</button>
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="close-up of elegant minimalist silk blouse in warm sand color with delicate stitching and soft architectural drape" src="https://i.postimg.cc/W12RJPBt/2.png"/>
+</div>
+<div class="space-y-1 px-1">
+<p class="text-[10px] uppercase tracking-widest text-secondary font-semibold">Seda Premium</p>
+<h3 class="font-serif text-lg text-on-surface">Top Assimetria Aérea</h3>
+<p class="text-primary font-bold">R$ 542,00</p>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group cursor-pointer">
+<div class="aspect-[4/5] overflow-hidden bg-surface-container-low relative mb-6">
+<button class="absolute top-4 right-4 text-primary bg-white/40 backdrop-blur-sm p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-lg" data-icon="favorite">favorite</span>
+</button>
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="luxury off-white minimal knit sweater styled with golden accessories in a bright airy studio setting" src="https://i.postimg.cc/0y8gJqTq/3.png"/>
+</div>
+<div class="space-y-1 px-1">
+<p class="text-[10px] uppercase tracking-widest text-secondary font-semibold">Tricot Fino</p>
+<h3 class="font-serif text-lg text-on-surface">Regata Canelada Marfim</h3>
+<p class="text-primary font-bold">R$ 215,00</p>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group cursor-pointer">
+<div class="aspect-[4/5] overflow-hidden bg-surface-container-low relative mb-6">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="woman wearing high-waisted dark brown blouse with voluminous sleeves in a high-fashion editorial pose" src="https://i.postimg.cc/65VJ3QmK/4.png"/>
+</div>
+<div class="space-y-1 px-1">
+<p class="text-[10px] uppercase tracking-widest text-secondary font-semibold">Algodão Orgânico</p>
+<h3 class="font-serif text-lg text-on-surface">Blusa Ombro Só Terra</h3>
+<p class="text-primary font-bold">R$ 298,00</p>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="group cursor-pointer">
+<div class="aspect-[4/5] overflow-hidden bg-surface-container-low relative mb-6">
+<span class="absolute top-4 left-4 sunset-gradient text-[10px] text-white px-3 py-1 uppercase tracking-[0.2em] font-bold z-10 shadow-sm">Novidade</span>
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="soft warm beige woven top detail with organic textures and minimalist design aesthetic" src="https://i.postimg.cc/3JQQYG9k/5.png"/>
+</div>
+<div class="space-y-1 px-1">
+<p class="text-[10px] uppercase tracking-widest text-secondary font-semibold">Limited Edition</p>
+<h3 class="font-serif text-lg text-on-surface">Blazer Cropped Noz</h3>
+<p class="text-primary font-bold">R$ 680,00</p>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="group cursor-pointer">
+<div class="aspect-[4/5] overflow-hidden bg-surface-container-low relative mb-6">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="luxury apparel flatlay with terracotta and earth toned garments on a minimalist white surface" src="https://i.postimg.cc/wTYYgNFV/6.png"/>
+</div>
+<div class="space-y-1 px-1">
+<p class="text-[10px] uppercase tracking-widest text-secondary font-semibold">Essencial</p>
+<h3 class="font-serif text-lg text-on-surface">T-shirt Algodão Egípcio</h3>
+<p class="text-primary font-bold">R$ 159,00</p>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-24 mb-12 flex justify-center items-center gap-8">
+<button class="text-secondary hover:text-primary transition-colors disabled:opacity-30">
+<span class="material-symbols-outlined" data-icon="west">west</span>
+</button>
+<div class="flex gap-4">
+<span class="font-bold text-primary border-b-2 border-primary pb-1">01</span>
+<span class="text-secondary hover:text-primary transition-colors cursor-pointer">02</span>
+<span class="text-secondary hover:text-primary transition-colors cursor-pointer">03</span>
+<span class="text-secondary">...</span>
+<span class="text-secondary hover:text-primary transition-colors cursor-pointer">12</span>
+</div>
+<button class="text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="east">east</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#dbdad7] dark:bg-stone-800 w-full border-t-0 mt-20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-16 w-full max-w-screen-2xl mx-auto">
+<div class="space-y-6">
+<span class="font-serif text-xl text-[#5f5e5e]">MARIA MOURA</span>
+<p class="font-sans text-xs font-light text-[#5f5e5e] leading-relaxed">Curadoria de moda feminina com foco em tecidos nobres e design atemporal. A beleza da simplicidade elevada ao extraordinário.</p>
+</div>
+<div class="space-y-4">
+<h4 class="font-sans text-xs font-bold uppercase tracking-widest text-[#865140]">Atendimento</h4>
+<ul class="space-y-2 font-sans text-xs font-light text-[#5f5e5e]">
+<li><a class="hover:opacity-70 underline-offset-4 hover:underline decoration-[#865140]" href="#">Trocas</a></li>
+<li><a class="hover:opacity-70 underline-offset-4 hover:underline decoration-[#865140]" href="#">Frete</a></li>
+<li><a class="hover:opacity-70 underline-offset-4 hover:underline decoration-[#865140]" href="#">Pagamento</a></li>
+<li><a class="hover:opacity-70 underline-offset-4 hover:underline decoration-[#865140]" href="#">Newsletter</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-sans text-xs font-bold uppercase tracking-widest text-[#865140]">Siga-nos</h4>
+<div class="flex gap-4">
+<a class="text-[#5f5e5e] hover:opacity-70 transition-opacity" href="#"><span class="material-symbols-outlined">camera</span></a>
+<a class="text-[#5f5e5e] hover:opacity-70 transition-opacity" href="#"><span class="material-symbols-outlined">brand_awareness</span></a>
+</div>
+</div>
+<div class="space-y-6">
+<h4 class="font-sans text-xs font-bold uppercase tracking-widest text-[#865140]">Inscreva-se</h4>
+<div class="flex border-b border-[#865140]/30 pb-2">
+<input class="bg-transparent border-none text-xs w-full focus:ring-0 placeholder:text-[#5f5e5e]/50" placeholder="Seu e-mail" type="email"/>
+<button class="text-[#865140]"><span class="material-symbols-outlined">arrow_forward</span></button>
+</div>
+</div>
+</div>
+<div class="px-12 py-8 border-t border-[#865140]/10 text-center">
+<p class="font-sans text-[10px] font-light text-[#5f5e5e] uppercase tracking-[0.2em]">© 2024 MARIA MOURA. Todos os direitos reservados.</p>
+</div>
+</footer>
+<!-- SideNavBar (Cart Drawer Simulation) - Suppressed as per context rules but keeping component logic available -->
+<div class="hidden fixed right-0 top-0 h-full w-96 bg-white shadow-2xl z-[100] transform translate-x-full transition-transform duration-500 ease-in-out" id="cart-drawer">
+<div class="flex flex-col h-full p-6 space-y-8">
+<div class="flex justify-between items-center border-b border-outline-variant pb-6">
+<div>
+<h2 class="text-[#865140] font-serif italic text-xl">Sua Sacola</h2>
+<p class="text-[#5f5e5e] text-xs uppercase tracking-widest mt-1">Itens selecionados</p>
+</div>
+<button class="text-secondary"><span class="material-symbols-outlined" data-icon="close">close</span></button>
+</div>
+<div class="flex-1 space-y-6 overflow-y-auto py-4">
+<!-- Cart Item Example -->
+<div class="flex gap-4">
+<div class="w-20 h-24 bg-surface-container-low shrink-0">
+<img class="w-full h-full object-cover" data-alt="small thumbnail of terracotta linen top" src="https://i.postimg.cc/fTQQDd50/7.png"/>
+</div>
+<div class="flex-1 space-y-1">
+<h4 class="font-serif text-sm">Blusa de Linho Duna</h4>
+<p class="text-[10px] text-secondary">Tamanho: P | Cor: Terracota</p>
+<p class="text-primary text-sm font-bold">R$ 389,00</p>
+</div>
+</div>
+</div>
+<div class="pt-6 border-t border-outline-variant space-y-4">
+<div class="flex justify-between font-bold text-primary">
+<span>Total</span>
+<span>R$ 389,00</span>
+</div>
+<button class="w-full sunset-gradient text-white py-4 rounded-lg font-label text-xs uppercase tracking-widest shadow-lg hover:opacity-90 transition-opacity">Finalizar Pedido</button>
+<button class="w-full text-secondary font-label text-[10px] uppercase tracking-widest text-center">Continuar Comprando</button>
+</div>
+</div>
+</div>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/551931405902" target="_blank" rel="noopener noreferrer" class="fixed bottom-8 right-8 z-[100] flex items-center justify-center p-0 w-16 h-16 bg-[#25D366] text-white rounded-full shadow-2xl hover:scale-110 transition-transform active:scale-95 group" aria-label="Fale conosco no WhatsApp">
+    <svg viewBox="0 0 24 24" class="w-9 h-9 fill-current">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span class="absolute right-full mr-4 bg-white text-stone-800 px-4 py-2 rounded-lg text-xs uppercase tracking-widest font-bold shadow-xl opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+        Fale Conosco
+    </span>
+</a>
+
+</body></html>

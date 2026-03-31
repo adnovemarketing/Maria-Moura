@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@300;400;600;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-lowest": "#ffffff",
+              "secondary-container": "#e4e2e1",
+              "on-tertiary": "#ffffff",
+              "tertiary-fixed": "#f3e0c0",
+              "surface-bright": "#faf9f6",
+              "secondary-fixed-dim": "#c8c6c6",
+              "surface-container-high": "#e9e8e5",
+              "primary": "#865140",
+              "on-primary": "#ffffff",
+              "tertiary": "#6a5d43",
+              "inverse-primary": "#fbb6a1",
+              "surface-container": "#efeeeb",
+              "surface-container-low": "#f4f3f1",
+              "on-primary-container": "#492012",
+              "on-error": "#ffffff",
+              "on-secondary-container": "#656464",
+              "background": "#faf9f6",
+              "on-secondary": "#ffffff",
+              "surface-tint": "#865140",
+              "outline-variant": "#d7c2bc",
+              "primary-fixed": "#ffdbd0",
+              "primary-container": "#c28471",
+              "surface-variant": "#e3e2e0",
+              "on-surface-variant": "#52443f",
+              "on-secondary-fixed-variant": "#474747",
+              "error-container": "#ffdad6",
+              "on-primary-fixed-variant": "#6a3a2b",
+              "on-tertiary-fixed": "#231a06",
+              "on-surface": "#1a1c1a",
+              "on-tertiary-container": "#352a15",
+              "tertiary-container": "#a19174",
+              "on-secondary-fixed": "#1b1c1c",
+              "surface-dim": "#dbdad7",
+              "secondary": "#5f5e5e",
+              "on-error-container": "#93000a",
+              "outline": "#84736f",
+              "primary-fixed-dim": "#fbb6a1",
+              "inverse-on-surface": "#f2f1ee",
+              "surface": "#faf9f6",
+              "on-primary-fixed": "#351005",
+              "error": "#ba1a1a",
+              "secondary-fixed": "#e4e2e1",
+              "on-tertiary-fixed-variant": "#51452d",
+              "on-background": "#1a1c1a",
+              "inverse-surface": "#2f312f",
+              "surface-container-highest": "#e3e2e0",
+              "tertiary-fixed-dim": "#d6c4a5"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .sunset-gradient {
+            background: linear-gradient(135deg, #865140 0%, #c28471 100%);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="bg-[#faf9f6]/80 dark:bg-stone-900/80 backdrop-blur-md docked full-width top-0 sticky z-50 transition-opacity duration-300">
+<div class="flex justify-between items-center px-8 py-4 w-full max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-8">
+<h1 class="font-serif text-2xl font-bold tracking-tighter text-[#865140] dark:text-[#c28471]">MARIA MOURA</h1>
+<nav class="hidden md:flex gap-6 font-serif text-lg tracking-wide">
+<a class="text-[#5f5e5e] hover:text-[#865140] transition-colors" href="#">Novidades</a>
+<a class="text-[#865140] border-b-2 border-[#865140] pb-1" href="#">Coleções</a>
+<a class="text-[#5f5e5e] hover:text-[#865140] transition-colors" href="#">Blusas</a>
+<a class="text-[#5f5e5e] hover:text-[#865140] transition-colors" href="#">Calças</a>
+<a class="text-[#5f5e5e] hover:text-[#865140] transition-colors" href="#">Sale</a>
+</nav>
+</div>
+<div class="flex items-center gap-4 text-[#865140] dark:text-[#c28471]">
+<button class="hover:opacity-80 transition-opacity duration-300 scale-95 active:duration-150">
+<span class="material-symbols-outlined">person</span>
+</button>
+<button class="hover:opacity-80 transition-opacity duration-300 scale-95 active:duration-150 relative">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="absolute -top-1 -right-1 bg-primary text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full">2</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-screen-2xl mx-auto px-8 pt-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+<!-- Left: Gallery Section -->
+<div class="lg:col-span-7 flex gap-4">
+<!-- Thumbnails -->
+<div class="hidden md:flex flex-col gap-4 w-24">
+<img class="w-24 h-32 object-cover opacity-100 cursor-pointer hover:opacity-80 transition-opacity rounded-sm" data-alt="Close-up of premium white linen texture with delicate stitching and natural weave patterns" src="https://i.postimg.cc/dVqMTKbY/1.png"/>
+<img class="w-24 h-32 object-cover opacity-60 cursor-pointer hover:opacity-100 transition-opacity rounded-sm" data-alt="Full shot of a model wearing a structured white linen vest and wide-leg trousers in a minimalist sunlit studio" src="https://i.postimg.cc/W12RJPBt/2.png"/>
+<img class="w-24 h-32 object-cover opacity-60 cursor-pointer hover:opacity-100 transition-opacity rounded-sm" data-alt="Detail of tortoiseshell buttons on a crisp white linen garment with soft afternoon shadows" src="https://i.postimg.cc/0y8gJqTq/3.png"/>
+<img class="w-24 h-32 object-cover opacity-60 cursor-pointer hover:opacity-100 transition-opacity rounded-sm" data-alt="Back view of a minimalist white linen piece showing elegant draping and clean construction" src="https://i.postimg.cc/65VJ3QmK/4.png"/>
+</div>
+<!-- Main Image -->
+<div class="flex-1 relative group">
+<img class="w-full h-[870px] object-cover rounded-sm" data-alt="Elegant woman in a high-end minimalist linen ensemble standing against a soft beige architectural background" src="https://i.postimg.cc/3JQQYG9k/5.png"/>
+<button class="absolute top-4 right-4 bg-surface/80 backdrop-blur-sm p-2 rounded-full shadow-sm opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary">zoom_in</span>
+</button>
+</div>
+</div>
+<!-- Right: Product Details -->
+<div class="lg:col-span-5 flex flex-col space-y-8">
+<header>
+<div class="flex justify-between items-start">
+<span class="text-xs tracking-[0.2em] text-secondary font-label uppercase mb-2 block">Coleção Essenciais</span>
+<span class="material-symbols-outlined text-secondary cursor-pointer">favorite</span>
+</div>
+<h2 class="font-headline text-4xl text-on-background mb-4">Colete de Linho Estruturado Maria</h2>
+<div class="flex items-baseline gap-4">
+<span class="text-2xl font-body font-light text-primary">R$ 589,00</span>
+<span class="text-sm text-secondary line-through">R$ 749,00</span>
+</div>
+<p class="text-xs text-secondary mt-2">ou 6x de R$ 98,16 sem juros</p>
+</header>
+<div class="space-y-6">
+<!-- Size Selector -->
+<div>
+<div class="flex justify-between items-center mb-4">
+<span class="text-sm font-label uppercase tracking-widest text-on-surface">Selecione o Tamanho</span>
+<div class="flex gap-4">
+<button class="text-xs text-secondary underline underline-offset-4 flex items-center gap-1 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-sm">straighten</span> Tabela de Medidas
+                                </button>
+<button class="text-xs text-secondary underline underline-offset-4 flex items-center gap-1 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-sm">person_search</span> Provador Virtual
+                                </button>
+</div>
+</div>
+<div class="flex gap-3">
+<button class="w-12 h-12 border border-outline-variant hover:border-primary flex items-center justify-center text-sm transition-all rounded-lg">PP</button>
+<button class="w-12 h-12 border border-outline-variant hover:border-primary flex items-center justify-center text-sm transition-all rounded-lg">P</button>
+<button class="w-12 h-12 border-2 border-primary flex items-center justify-center text-sm bg-surface-container-low rounded-lg">M</button>
+<button class="w-12 h-12 border border-outline-variant hover:border-primary flex items-center justify-center text-sm transition-all rounded-lg">G</button>
+<button class="w-12 h-12 border border-outline-variant opacity-40 flex items-center justify-center text-sm cursor-not-allowed rounded-lg">GG</button>
+</div>
+<!-- Urgency Trigger -->
+<p class="text-error text-xs mt-4 flex items-center gap-2 font-medium">
+<span class="material-symbols-outlined text-sm">bolt</span>
+                            Últimas peças no tamanho M
+                        </p>
+</div>
+<!-- CTA -->
+<button class="sunset-gradient w-full py-5 rounded-lg text-on-primary font-label tracking-[0.15em] uppercase text-sm font-semibold hover:opacity-90 transition-all transform active:scale-[0.98] shadow-lg shadow-primary/20">
+                        Adicionar à Sacola
+                    </button>
+</div>
+<!-- Info Tabs / Accordion Style -->
+<div class="border-t border-outline-variant pt-8 space-y-6">
+<div>
+<h3 class="text-sm font-bold tracking-widest uppercase mb-3 flex items-center justify-between cursor-pointer">
+                            Descrição
+                            <span class="material-symbols-outlined">remove</span>
+</h3>
+<p class="text-secondary text-sm leading-relaxed font-light">
+                            O Colete Maria é a personificação do luxo despretensioso. Com corte de alfaiataria impecável e estrutura que valoriza a silhueta, esta peça transita do escritório ao jantar com elegância. 
+                        </p>
+</div>
+<div>
+<h3 class="text-sm font-bold tracking-widest uppercase mb-3">Composição e Cuidados</h3>
+<ul class="text-secondary text-sm space-y-2 font-light">
+<li class="flex items-center gap-3">
+<span class="w-1 h-1 bg-primary rounded-full"></span>
+                                70% Linho Nobre, 30% Algodão Orgânico
+                            </li>
+<li class="flex items-center gap-3">
+<span class="w-1 h-1 bg-primary rounded-full"></span>
+                                Forro 100% Acetato Italiano
+                            </li>
+<li class="flex items-center gap-3">
+<span class="w-1 h-1 bg-primary rounded-full"></span>
+                                Lavagem a seco recomendada
+                            </li>
+</ul>
+</div>
+<div class="flex gap-8 py-4 bg-surface-container-low px-6 rounded-lg">
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-primary">local_shipping</span>
+<span class="text-[10px] text-secondary uppercase">Frete Grátis</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-primary">published_with_changes</span>
+<span class="text-[10px] text-secondary uppercase">Troca Fácil</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-primary">verified</span>
+<span class="text-[10px] text-secondary uppercase">Premium</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Complete the Look Section -->
+<section class="mt-32 mb-20">
+<div class="flex items-baseline justify-between mb-12">
+<h3 class="font-headline text-3xl">Complete o Look</h3>
+<a class="text-xs uppercase tracking-widest font-bold border-b border-primary pb-1" href="#">Ver coleção completa</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<!-- Look Item 1 -->
+<div class="group cursor-pointer">
+<div class="overflow-hidden bg-surface-container-lowest mb-4">
+<img class="w-full aspect-[4/5] object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Model wearing wide-leg white linen trousers that match the featured vest in an elegant architectural setting" src="https://i.postimg.cc/wTYYgNFV/6.png"/>
+</div>
+<h4 class="text-sm font-body text-on-surface group-hover:text-primary transition-colors">Calça Pantalona em Linho</h4>
+<p class="text-sm text-secondary mt-1">R$ 649,00</p>
+<button class="mt-3 text-[10px] font-bold uppercase tracking-tighter opacity-0 group-hover:opacity-100 transition-opacity">+ Rápida Escolha</button>
+</div>
+<!-- Look Item 2 -->
+<div class="group cursor-pointer">
+<div class="overflow-hidden bg-surface-container-lowest mb-4">
+<img class="w-full aspect-[4/5] object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Detail of a minimalist gold necklace on skin, reflecting luxury and understated beauty" src="https://i.postimg.cc/fTQQDd50/7.png"/>
+</div>
+<h4 class="text-sm font-body text-on-surface group-hover:text-primary transition-colors">Colar Elo Banhado a Ouro</h4>
+<p class="text-sm text-secondary mt-1">R$ 289,00</p>
+<button class="mt-3 text-[10px] font-bold uppercase tracking-tighter opacity-0 group-hover:opacity-100 transition-opacity">+ Rápida Escolha</button>
+</div>
+<!-- Look Item 3 -->
+<div class="group cursor-pointer">
+<div class="overflow-hidden bg-surface-container-lowest mb-4">
+<img class="w-full aspect-[4/5] object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Minimalist leather sandals in a neutral tone on a stone surface with soft lighting" src="https://i.postimg.cc/3rvQs1Xz/8.png"/>
+</div>
+<h4 class="text-sm font-body text-on-surface group-hover:text-primary transition-colors">Sandália Minimal Couro</h4>
+<p class="text-sm text-secondary mt-1">R$ 429,00</p>
+<button class="mt-3 text-[10px] font-bold uppercase tracking-tighter opacity-0 group-hover:opacity-100 transition-opacity">+ Rápida Escolha</button>
+</div>
+<!-- Look Item 4 -->
+<div class="group cursor-pointer">
+<div class="overflow-hidden bg-surface-container-lowest mb-4">
+<img class="w-full aspect-[4/5] object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Luxury beige leather handbag with clean lines and premium hardware" src="https://i.postimg.cc/05w1TnGs/9.png"/>
+</div>
+<h4 class="text-sm font-body text-on-surface group-hover:text-primary transition-colors">Bolsa Estruturada Nude</h4>
+<p class="text-sm text-secondary mt-1">R$ 890,00</p>
+<button class="mt-3 text-[10px] font-bold uppercase tracking-tighter opacity-0 group-hover:opacity-100 transition-opacity">+ Rápida Escolha</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#dbdad7] dark:bg-stone-800 w-full border-t-0 mt-20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-16 w-full max-w-screen-2xl mx-auto">
+<div class="space-y-6">
+<h2 class="font-serif text-xl text-[#5f5e5e]">MARIA MOURA</h2>
+<p class="text-[#5f5e5e] font-sans text-xs font-light leading-loose">
+                    Curadoria de moda atemporal para a mulher contemporânea que valoriza a essência do design.
+                </p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-sans text-xs font-bold uppercase tracking-widest text-[#865140]">Atendimento</h4>
+<nav class="flex flex-col gap-2 font-sans text-xs font-light text-[#5f5e5e]">
+<a class="underline decoration-[#865140] underline-offset-4 opacity-100 hover:opacity-70" href="#">Trocas</a>
+<a class="underline decoration-[#865140] underline-offset-4 opacity-100 hover:opacity-70" href="#">Frete</a>
+<a class="underline decoration-[#865140] underline-offset-4 opacity-100 hover:opacity-70" href="#">Pagamento</a>
+</nav>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-sans text-xs font-bold uppercase tracking-widest text-[#865140]">Explorar</h4>
+<nav class="flex flex-col gap-2 font-sans text-xs font-light text-[#5f5e5e]">
+<a class="underline decoration-[#865140] underline-offset-4 opacity-100 hover:opacity-70" href="#">Novidades</a>
+<a class="font-bold text-[#865140] underline decoration-[#865140] underline-offset-4 opacity-100 hover:opacity-70" href="#">Coleções</a>
+<a class="underline decoration-[#865140] underline-offset-4 opacity-100 hover:opacity-70" href="#">Newsletter</a>
+</nav>
+</div>
+<div class="space-y-4">
+<h4 class="font-sans text-xs font-bold uppercase tracking-widest text-[#865140]">Inscreva-se</h4>
+<div class="flex border-b border-[#865140] py-2">
+<input class="bg-transparent border-none text-xs focus:ring-0 w-full" placeholder="E-mail" type="email"/>
+<button class="material-symbols-outlined text-[#865140]">arrow_forward</button>
+</div>
+</div>
+</div>
+<div class="px-12 py-8 border-t border-[#865140]/10 flex justify-center">
+<p class="text-[#5f5e5e] font-sans text-xs font-light">© 2024 MARIA MOURA. Todos os direitos reservados.</p>
+</div>
+</footer>
+<!-- SideNavBar (Hidden Shopping Bag Example) -->
+<div class="hidden fixed right-0 top-0 h-full w-96 bg-[#ffffff] dark:bg-stone-950 shadow-2xl z-[100] transition-transform duration-500 ease-in-out flex flex-col p-6 space-y-8" id="cart-drawer">
+<div class="flex justify-between items-center">
+<h2 class="font-serif italic text-[#865140] text-xl">Sua Sacola</h2>
+<button class="material-symbols-outlined">close</button>
+</div>
+<div class="flex-1 overflow-y-auto">
+<div class="flex gap-4 p-2 hover:bg-[#faf9f6] rounded-lg transition-colors group">
+<img class="w-20 h-24 object-cover" data-alt="Miniature view of the linen vest in a shopping bag drawer" src="https://i.postimg.cc/kMbP0sNC/10.png"/>
+<div class="flex-1">
+<h5 class="font-sans text-xs uppercase tracking-widest text-[#865140]">Colete Maria</h5>
+<p class="text-[10px] text-secondary">Tamanho: M</p>
+<p class="text-xs font-bold mt-2">R$ 589,00</p>
+</div>
+</div>
+</div>
+<div class="pt-6 border-t border-outline-variant space-y-4">
+<div class="flex justify-between text-sm uppercase tracking-widest">
+<span>Subtotal</span>
+<span>R$ 589,00</span>
+</div>
+<button class="sunset-gradient w-full py-4 text-white font-sans text-sm uppercase tracking-widest rounded-lg">Finalizar Pedido</button>
+</div>
+</div>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/551931405902" target="_blank" rel="noopener noreferrer" class="fixed bottom-8 right-8 z-[100] flex items-center justify-center p-0 w-16 h-16 bg-[#25D366] text-white rounded-full shadow-2xl hover:scale-110 transition-transform active:scale-95 group" aria-label="Fale conosco no WhatsApp">
+    <svg viewBox="0 0 24 24" class="w-9 h-9 fill-current">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span class="absolute right-full mr-4 bg-white text-stone-800 px-4 py-2 rounded-lg text-xs uppercase tracking-widest font-bold shadow-xl opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+        Fale Conosco
+    </span>
+</a>
+
+</body></html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;600;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-lowest": "#ffffff",
+              "secondary-container": "#e4e2e1",
+              "on-tertiary": "#ffffff",
+              "tertiary-fixed": "#f3e0c0",
+              "surface-bright": "#faf9f6",
+              "secondary-fixed-dim": "#c8c6c6",
+              "surface-container-high": "#e9e8e5",
+              "primary": "#865140",
+              "on-primary": "#ffffff",
+              "tertiary": "#6a5d43",
+              "inverse-primary": "#fbb6a1",
+              "surface-container": "#efeeeb",
+              "surface-container-low": "#f4f3f1",
+              "on-primary-container": "#492012",
+              "on-error": "#ffffff",
+              "on-secondary-container": "#656464",
+              "background": "#faf9f6",
+              "on-secondary": "#ffffff",
+              "surface-tint": "#865140",
+              "outline-variant": "#d7c2bc",
+              "primary-fixed": "#ffdbd0",
+              "primary-container": "#c28471",
+              "surface-variant": "#e3e2e0",
+              "on-surface-variant": "#52443f",
+              "on-secondary-fixed-variant": "#474747",
+              "error-container": "#ffdad6",
+              "on-primary-fixed-variant": "#6a3a2b",
+              "on-tertiary-fixed": "#231a06",
+              "on-surface": "#1a1c1a",
+              "on-tertiary-container": "#352a15",
+              "tertiary-container": "#a19174",
+              "on-secondary-fixed": "#1b1c1c",
+              "surface-dim": "#dbdad7",
+              "secondary": "#5f5e5e",
+              "on-error-container": "#93000a",
+              "outline": "#84736f",
+              "primary-fixed-dim": "#fbb6a1",
+              "inverse-on-surface": "#f2f1ee",
+              "surface": "#faf9f6",
+              "on-primary-fixed": "#351005",
+              "error": "#ba1a1a",
+              "secondary-fixed": "#e4e2e1",
+              "on-tertiary-fixed-variant": "#51452d",
+              "on-background": "#1a1c1a",
+              "inverse-surface": "#2f312f",
+              "surface-container-highest": "#e3e2e0",
+              "tertiary-fixed-dim": "#d6c4a5"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0px 20px 40px rgba(26, 28, 26, 0.05);
+        }
+        .sunset-gradient {
+            background: linear-gradient(135deg, #865140 0%, #c28471 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="bg-[#faf9f6]/80 dark:bg-stone-900/80 backdrop-blur-md docked full-width top-0 sticky z-50 no-border shadow-none bg-surface-container-low">
+<div class="flex justify-between items-center px-8 py-4 w-full max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-8">
+<h1 class="font-serif text-2xl font-bold tracking-tighter text-[#865140] dark:text-[#c28471]">MARIA MOURA</h1>
+<nav class="hidden md:flex items-center space-x-8 font-serif text-lg tracking-wide">
+<a class="text-[#865140] border-b-2 border-[#865140] pb-1" href="#">Novidades</a>
+<a class="text-[#5f5e5e] hover:text-[#865140] transition-colors" href="#">Coleções</a>
+<a class="text-[#5f5e5e] hover:text-[#865140] transition-colors" href="#">Blusas</a>
+<a class="text-[#5f5e5e] hover:text-[#865140] transition-colors" href="#">Calças</a>
+<a class="text-[#5f5e5e] hover:text-[#865140] transition-colors" href="#">Sale</a>
+</nav>
+</div>
+<div class="flex items-center space-x-6 text-[#865140] dark:text-[#c28471]">
+<button class="hover:opacity-80 transition-opacity duration-300 scale-95 active:duration-150">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+<button class="hover:opacity-80 transition-opacity duration-300 scale-95 active:duration-150">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[921px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Casual Chic Editorial" class="w-full h-full object-cover object-top" data-alt="Elegant woman wearing a tailored off-white linen blazer and silk trousers, minimalist chic aesthetic, high-end fashion photography with soft natural morning light." src="https://i.postimg.cc/dVqMTKbY/1.png"/>
+<div class="absolute inset-0 bg-black/5"></div>
+</div>
+<div class="relative z-10 w-full max-w-screen-2xl mx-auto px-12">
+<div class="max-w-lg bg-surface/40 backdrop-blur-md p-8 inline-block">
+<span class="font-label text-xs uppercase tracking-[0.3em] text-secondary mb-3 block">Nova Coleção</span>
+<h2 class="font-headline text-4xl md:text-6xl leading-tight mb-6 text-on-surface">Sofisticação no seu Dia a Dia</h2>
+<button class="sunset-gradient text-on-primary px-8 py-4 rounded-lg text-xs font-label uppercase tracking-widest hover:opacity-90 transition-all editorial-shadow">
+                        Explorar Coleção
+                    </button>
+</div>
+</div>
+</section>
+<!-- Categories Grid (Editorial Asymmetry) -->
+<section class="py-24 px-12 max-w-screen-2xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 h-[800px]">
+<div class="md:col-span-4 h-full relative group overflow-hidden">
+<img alt="Blusas" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close up of a premium white silk blouse with delicate button details, soft editorial lighting, minimal background" src="https://i.postimg.cc/W12RJPBt/2.png"/>
+<div class="absolute bottom-8 left-8">
+<h3 class="font-headline text-3xl text-on-surface bg-surface/80 px-6 py-2">Blusas</h3>
+</div>
+</div>
+<div class="md:col-span-8 grid grid-rows-2 gap-8">
+<div class="grid grid-cols-2 gap-8">
+<div class="relative group overflow-hidden">
+<img alt="Calças" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Woman wearing high-waisted beige wide-leg trousers walking in a minimalist architectural space, clean lines, warm tones" src="https://i.postimg.cc/0y8gJqTq/3.png"/>
+<div class="absolute bottom-6 left-6">
+<h3 class="font-headline text-2xl text-on-surface bg-surface/80 px-4 py-1">Calças</h3>
+</div>
+</div>
+<div class="relative group overflow-hidden">
+<img alt="Vestidos" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Detail of a flowy midi summer dress in sand color, ethereal aesthetic, soft focus, natural textures" src="https://i.postimg.cc/65VJ3QmK/4.png"/>
+<div class="absolute bottom-6 left-6">
+<h3 class="font-headline text-2xl text-on-surface bg-surface/80 px-4 py-1">Vestidos</h3>
+</div>
+</div>
+</div>
+<div class="relative group overflow-hidden">
+<img alt="Terceira Peça" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Editorial fashion shot of a woman wearing a camel wool coat draped over shoulders, high-end layering style" src="https://i.postimg.cc/3JQQYG9k/5.png"/>
+<div class="absolute bottom-8 left-8">
+<h3 class="font-headline text-3xl text-on-surface bg-surface/80 px-8 py-3">Terceira Peça</h3>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Best Sellers Carousel (Mockup) -->
+<section class="bg-surface-container-low py-24">
+<div class="max-w-screen-2xl mx-auto px-12">
+<div class="flex justify-between items-end mb-16">
+<div>
+<span class="font-label text-sm uppercase tracking-widest text-primary mb-2 block">Seleção Curada</span>
+<h2 class="font-headline text-5xl">Mais Vendidos</h2>
+</div>
+<div class="flex space-x-4">
+<button class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:bg-surface transition-colors">
+<span class="material-symbols-outlined" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:bg-surface transition-colors">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Product Card 1 -->
+<div class="group">
+<div class="relative aspect-[4/5] mb-6 overflow-hidden bg-surface-container-lowest">
+<img alt="Regata Tricot" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100 group-hover:opacity-0" data-alt="Front view of a minimalist cream knit top on a model, soft sunlight, clean background" src="https://i.postimg.cc/wTYYgNFV/6.png"/>
+<img alt="Regata Tricot Costas" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 group-hover:opacity-100" data-alt="Back view of the cream knit top showing detail of the neckline and texture" src="https://i.postimg.cc/fTQQDd50/7.png"/>
+<button class="absolute bottom-4 left-4 right-4 bg-surface/90 backdrop-blur-sm py-3 text-xs uppercase tracking-widest translate-y-12 group-hover:translate-y-0 transition-transform duration-300">
+                                Adicionar à Sacola
+                            </button>
+</div>
+<h4 class="font-headline text-lg mb-1">Regata Tricot Marfil</h4>
+<p class="text-primary font-semibold mb-1">R$ 289,00</p>
+<p class="text-secondary text-xs uppercase tracking-wider">3x de R$ 96,33 sem juros</p>
+</div>
+<!-- Product Card 2 -->
+<div class="group">
+<div class="relative aspect-[4/5] mb-6 overflow-hidden bg-surface-container-lowest">
+<img alt="Pantalona Camel" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100 group-hover:opacity-0" data-alt="Full body shot of model wearing camel wide leg pants and a white silk shirt, Parisian street background" src="https://i.postimg.cc/3rvQs1Xz/8.png"/>
+<img alt="Pantalona Camel Costas" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 group-hover:opacity-100" data-alt="Back pocket and tailoring detail of camel wide leg trousers" src="https://i.postimg.cc/05w1TnGs/9.png"/>
+<button class="absolute bottom-4 left-4 right-4 bg-surface/90 backdrop-blur-sm py-3 text-xs uppercase tracking-widest translate-y-12 group-hover:translate-y-0 transition-transform duration-300">
+                                Adicionar à Sacola
+                            </button>
+</div>
+<h4 class="font-headline text-lg mb-1">Pantalona Alfaiataria Camel</h4>
+<p class="text-primary font-semibold mb-1">R$ 459,00</p>
+<p class="text-secondary text-xs uppercase tracking-wider">5x de R$ 91,80 sem juros</p>
+</div>
+<!-- Product Card 3 -->
+<div class="group">
+<div class="relative aspect-[4/5] mb-6 overflow-hidden bg-surface-container-lowest">
+<img alt="Blazer Estruturado" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100 group-hover:opacity-0" data-alt="Model wearing a structured off-white blazer, minimalist studio setting" src="https://i.postimg.cc/kMbP0sNC/10.png"/>
+<img alt="Blazer Estruturado Costas" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 group-hover:opacity-100" data-alt="Back view of the structured off-white blazer showing elegant fit" src="https://i.postimg.cc/kMbP0sNC/10.png"/>
+<button class="absolute bottom-4 left-4 right-4 bg-surface/90 backdrop-blur-sm py-3 text-xs uppercase tracking-widest translate-y-12 group-hover:translate-y-0 transition-transform duration-300">
+                                Adicionar à Sacola
+                            </button>
+</div>
+<h4 class="font-headline text-lg mb-1">Blazer Linho Atemporal</h4>
+<p class="text-primary font-semibold mb-1">R$ 689,00</p>
+<p class="text-secondary text-xs uppercase tracking-wider">6x de R$ 114,83 sem juros</p>
+</div>
+<!-- Product Card 4 -->
+<div class="group">
+<div class="relative aspect-[4/5] mb-6 overflow-hidden bg-surface-container-lowest">
+<img alt="T-Shirt Essential" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100 group-hover:opacity-0" data-alt="Simple white basic tee in high quality pima cotton on model" src="https://i.postimg.cc/kMbP0sNC/10.png"/>
+<img alt="T-Shirt Essential Costas" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 group-hover:opacity-100" data-alt="Back view of essential white t-shirt showing fabric drape" src="https://i.postimg.cc/kMbP0sNC/10.png"/>
+<button class="absolute bottom-4 left-4 right-4 bg-surface/90 backdrop-blur-sm py-3 text-xs uppercase tracking-widest translate-y-12 group-hover:translate-y-0 transition-transform duration-300">
+                                Adicionar à Sacola
+                            </button>
+</div>
+<h4 class="font-headline text-lg mb-1">T-Shirt Essential Algodão</h4>
+<p class="text-primary font-semibold mb-1">R$ 159,00</p>
+<p class="text-secondary text-xs uppercase tracking-wider">2x de R$ 79,50 sem juros</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-24 max-w-screen-xl mx-auto px-12">
+<div class="text-center mb-16">
+<span class="font-label text-sm uppercase tracking-widest text-primary mb-2 block">Experiência Moura</span>
+<h2 class="font-headline text-4xl italic">O que dizem nossas clientes</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+<div class="text-center">
+<p class="font-serif italic text-lg text-secondary mb-6 leading-relaxed">"O caimento das peças é impecável. O blazer de linho se tornou meu uniforme de trabalho favorito."</p>
+<p class="font-label text-xs uppercase tracking-widest text-on-surface">— Mariana S., São Paulo</p>
+</div>
+<div class="text-center">
+<p class="font-serif italic text-lg text-secondary mb-6 leading-relaxed">"Senti o carinho da marca desde a embalagem. Qualidade que não se encontra mais por aí."</p>
+<p class="font-label text-xs uppercase tracking-widest text-on-surface">— Beatriz L., Rio de Janeiro</p>
+</div>
+<div class="text-center">
+<p class="font-serif italic text-lg text-secondary mb-6 leading-relaxed">"Moda minimalista com alma. Cada peça da Maria Moura conta uma história de sofisticação."</p>
+<p class="font-label text-xs uppercase tracking-widest text-on-surface">— Helena F., Curitiba</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#dbdad7] dark:bg-stone-800 w-full border-t-0 mt-20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-16 w-full max-w-screen-2xl mx-auto">
+<div class="space-y-6">
+<h2 class="font-serif text-xl text-[#5f5e5e]">MARIA MOURA</h2>
+<p class="font-sans text-xs font-light text-[#5f5e5e] leading-relaxed">
+                    Curadoria de moda para a mulher contemporânea que não abre mão da elegância atemporal.
+                </p>
+</div>
+<div>
+<h3 class="font-label text-sm uppercase tracking-widest mb-6 font-bold text-[#865140]">Atendimento</h3>
+<ul class="space-y-4 font-sans text-xs font-light text-[#5f5e5e]">
+<li><a class="hover:opacity-70 transition-opacity underline decoration-[#865140] underline-offset-4" href="#">Trocas</a></li>
+<li><a class="hover:opacity-70 transition-opacity" href="#">Frete</a></li>
+<li><a class="hover:opacity-70 transition-opacity" href="#">Pagamento</a></li>
+<li><a class="hover:opacity-70 transition-opacity" href="#">Privacidade</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-label text-sm uppercase tracking-widest mb-6 text-[#5f5e5e]">Explore</h3>
+<ul class="space-y-4 font-sans text-xs font-light text-[#5f5e5e]">
+<li><a class="hover:opacity-70 transition-opacity" href="#">Coleções</a></li>
+<li><a class="hover:opacity-70 transition-opacity" href="#">Journal</a></li>
+<li><a class="hover:opacity-70 transition-opacity" href="#">Lojas Físicas</a></li>
+<li><a class="hover:opacity-70 transition-opacity" href="#">Newsletter</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h3 class="font-label text-sm uppercase tracking-widest mb-4 text-[#5f5e5e]">News</h3>
+<p class="font-sans text-xs font-light text-[#5f5e5e]">Inscreva-se para receber novidades exclusivas.</p>
+<div class="relative">
+<input class="w-full bg-transparent border-0 border-b border-outline-variant py-2 px-0 focus:ring-0 focus:border-primary text-xs transition-all" placeholder="Seu melhor e-mail" type="email"/>
+<button class="absolute right-0 bottom-2">
+<span class="material-symbols-outlined text-primary" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<div class="px-12 py-8 border-t border-black/5 flex justify-between items-center max-w-screen-2xl mx-auto">
+<p class="font-sans text-xs font-light text-[#5f5e5e]">© 2024 MARIA MOURA. Todos os direitos reservados.</p>
+<div class="flex space-x-6">
+<span class="material-symbols-outlined text-[#5f5e5e] text-lg" data-icon="public">public</span>
+<span class="material-symbols-outlined text-[#5f5e5e] text-lg" data-icon="share">share</span>
+</div>
+</div>
+</footer>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/551931405902" target="_blank" rel="noopener noreferrer" class="fixed bottom-8 right-8 z-[100] flex items-center justify-center p-0 w-16 h-16 bg-[#25D366] text-white rounded-full shadow-2xl hover:scale-110 transition-transform active:scale-95 group" aria-label="Fale conosco no WhatsApp">
+    <svg viewBox="0 0 24 24" class="w-9 h-9 fill-current">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span class="absolute right-full mr-4 bg-white text-stone-800 px-4 py-2 rounded-lg text-xs uppercase tracking-widest font-bold shadow-xl opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+        Fale Conosco
+    </span>
+</a>
+
+</body></html>
